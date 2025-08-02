@@ -1,0 +1,495 @@
+fileFormatVersion: 2
+guid: 29f2e96fdf7bf8d478e9e365bde663b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4990947605147488904
+    second: CakeGameSheet1_0
+  - first:
+      213: 6409740586896469514
+    second: CakeGameSheet1_1
+  - first:
+      213: -7395671712573492524
+    second: CakeGameSheet1_2
+  - first:
+      213: 1532573978030004628
+    second: CakeGameSheet1_3
+  - first:
+      213: 1149528456319264722
+    second: CakeGameSheet1_4
+  - first:
+      213: 7366234605078767570
+    second: CakeGameSheet1_5
+  - first:
+      213: -5385894718755124379
+    second: CakeGameSheet1_6
+  - first:
+      213: -6749403340276674778
+    second: CakeGameSheet1_7
+  - first:
+      213: -5774895909333458753
+    second: CakeGameSheet1_8
+  - first:
+      213: -1184718840907193674
+    second: CakeGameSheet1_9
+  - first:
+      213: -2275975296906338146
+    second: CakeGameSheet1_10
+  - first:
+      213: 5584186189056360852
+    second: CakeGameSheet1_11
+  - first:
+      213: -8680536434060631440
+    second: CakeGameSheet1_12
+  - first:
+      213: -2704248953986534710
+    second: CakeGameSheet1_13
+  - first:
+      213: -5318056202320810796
+    second: CakeGameSheet1_14
+  - first:
+      213: -4981053497960403324
+    second: CakeGameSheet1_15
+  - first:
+      213: -3751921137882122071
+    second: CakeGameSheet1_16
+  - first:
+      213: 7195975477869804764
+    second: CakeGameSheet1_17
+  - first:
+      213: -5290587068255499918
+    second: CakeGameSheet1_18
+  - first:
+      213: 1382691525455118493
+    second: CakeGameSheet1_19
+  - first:
+      213: 7143116107830649281
+    second: CakeGameSheet1_20
+  - first:
+      213: 47855700140323672
+    second: CakeGameSheet1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flame_01
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 4233
+        width: 205
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88217695768634540800000000000000
+      internalID: 4990947605147488904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ignite_02
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 4290
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e2e508a19f3f850800000000000000
+      internalID: 6409740586896469514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ignite_01
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 4290
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2f6a8e2cb4d5990800000000000000
+      internalID: -7395671712573492524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ignite_03
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 4290
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4995c70c9ebc44510800000000000000
+      internalID: 1532573978030004628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blow_01
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 4300
+        width: 175
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f49f00c6d4552a0800000000000000
+      internalID: -6749403340276674778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blow_02
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 4300
+        width: 175
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0a25564c27bdfa0800000000000000
+      internalID: -5774895909333458753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candle
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 3792
+        width: 70
+        height: 784
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2a309bd780f8fe0800000000000000
+      internalID: -1184718840907193674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icing_Top
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 2983
+        width: 2208
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 072eafbca1a888780800000000000000
+      internalID: -8680536434060631440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icing_Bottom
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2613
+        width: 1467
+        height: 359
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2790b57971f0496b0800000000000000
+      internalID: -5290587068255499918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cake_Top
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1420
+        width: 2374
+        height: 1191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1ed941142712360800000000000000
+      internalID: 7143116107830649281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cake_Layer
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 574
+        width: 2352
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853775771840aa000800000000000000
+      internalID: 47855700140323672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flame_02
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 4233
+        width: 200
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce77f017b5ecd7a43ab78aee22302add
+      internalID: -2055895974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flame_03
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 4233
+        width: 200
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4845844508ed0442a90b83df32a8f75
+      internalID: -1108261308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 61a04180dbcd72049b5c93b868b43bb2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Blow_01: -6749403340276674778
+      Blow_02: -5774895909333458753
+      CakeGameSheet1_10: -2275975296906338146
+      CakeGameSheet1_11: 5584186189056360852
+      CakeGameSheet1_13: -2704248953986534710
+      CakeGameSheet1_14: -5318056202320810796
+      CakeGameSheet1_15: -4981053497960403324
+      CakeGameSheet1_16: -3751921137882122071
+      CakeGameSheet1_17: 7195975477869804764
+      CakeGameSheet1_19: 1382691525455118493
+      CakeGameSheet1_4: 1149528456319264722
+      CakeGameSheet1_5: 7366234605078767570
+      CakeGameSheet1_6: -5385894718755124379
+      Cake_Layer: 47855700140323672
+      Cake_Top: 7143116107830649281
+      Candle: -1184718840907193674
+      Flame_01: 4990947605147488904
+      Flame_02: -2055895974
+      Flame_03: -1108261308
+      Icing_Bottom: -5290587068255499918
+      Icing_Top: -8680536434060631440
+      Ignite_01: -7395671712573492524
+      Ignite_02: 6409740586896469514
+      Ignite_03: 1532573978030004628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
