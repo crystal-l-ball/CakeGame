@@ -92,13 +92,15 @@ internal class CandleBehaviour : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        if (GameController.Instance != null) {
-            GameController.Instance.OnGameOver      -= StopTween;
-            GameController.Instance.OnBeginIgnition -= BeginIgnition;
-        }
+private void OnDisable() {
+    if (GameController.Instance != null) {
+        GameController.Instance.OnGameOver      -= StopTween;
+        GameController.Instance.OnBeginIgnition -= BeginIgnition;
     }
+    // 👉 LED safety: ensure OFF if this candle is disabled/destroyed
+    ArduinoLedController.Instance?.Off(candleIndex);
+}
+
 
     private void Update()
     {
@@ -137,64 +139,71 @@ internal class CandleBehaviour : MonoBehaviour
         Ignite();
     }
 
-    protected void Spark()
-    {
-        isSparking = true;
-        if (igniteObject) igniteObject.SetActive(true);
+    protected void Spark() {
+    isSparking = true;
+    if (igniteObject) igniteObject.SetActive(true);
 
-        Tween.Delay(igniteDuration).OnComplete(() =>
-        {
-            if (igniteObject) igniteObject.SetActive(false);
-            Tween.Delay(igniteDuration).OnComplete(() =>
-            {
-                if (igniteObject) igniteObject.SetActive(true);
-                Tween.Delay(igniteDuration).OnComplete(() => { if (igniteObject) igniteObject.SetActive(false); });
-            });
+    // 👉 LED: candle is trying to ignite → flicker this index
+    ArduinoLedController.Instance?.Flicker(candleIndex);
+
+    Tween.Delay(igniteDuration).OnComplete(() => {
+        if (igniteObject) igniteObject.SetActive(false);
+        Tween.Delay(igniteDuration).OnComplete(() => {
+            if (igniteObject) igniteObject.SetActive(true);
+            Tween.Delay(igniteDuration).OnComplete(() => { if (igniteObject) igniteObject.SetActive(false); });
         });
+    });
 
-        Tween.Delay(igniteDuration * 4).OnComplete(Ignite);
-    }
+    Tween.Delay(igniteDuration * 4).OnComplete(Ignite);
+}
 
-    protected void Ignite()
-    {
-        if (isLit || (GameController.Instance != null && GameController.Instance.GameOver))
-            return;
 
-        RandomizeBurnSettings();
+protected void Ignite() {
+    if (isLit || (GameController.Instance != null && GameController.Instance.GameOver))
+        return;
 
-        isLit = true;
-        isSparking = false;
+    RandomizeBurnSettings();
 
-        if (blowObject)   blowObject.SetActive(false);
-        if (igniteObject) igniteObject.SetActive(false);
-        if (flameObject)  flameObject.SetActive(true);
+    isLit = true;
+    isSparking = false;
 
-        currentHeight = candleTop.localPosition.y;
+    if (blowObject)   blowObject.SetActive(false);
+    if (igniteObject) igniteObject.SetActive(false);
+    if (flameObject)  flameObject.SetActive(true);
 
-        burnTween.Stop();
-        burnTween = Tween.LocalPositionY(candleTop, currentHeight, 0f, BurnTime).OnComplete(BurnOut);
+    // 👉 LED: candle is now lit → steady ON
+    ArduinoLedController.Instance?.OnSteady(candleIndex);
 
-        // update color/scale instantly so it matches current height
-        UpdateFlameWarning();
-    }
+    currentHeight = candleTop.localPosition.y;
 
-    protected void Extinguish()
-    {
-        isLit = false;
+    burnTween.Stop();
+    burnTween = Tween.LocalPositionY(candleTop, currentHeight, 0f, BurnTime).OnComplete(BurnOut);
 
-        if (flameObject)  flameObject.SetActive(false);
-        if (igniteObject) igniteObject.SetActive(false);
-        if (blowObject)   blowObject.SetActive(true);
+    UpdateFlameWarning();
+}
 
-        burnTween.Stop();
 
-        Tween.Delay(blowDuration).OnComplete(() => { if (blowObject) blowObject.SetActive(false); });
+protected void Extinguish() {
+    isLit = false;
 
-        currentHeight = candleTop.localPosition.y;
-        reigniteTimer = Random.Range(MIN_IGNITE_DELAY, MAX_IGNITE_DELAY);
+    if (flameObject)  flameObject.SetActive(false);
+    if (igniteObject) igniteObject.SetActive(false);
+    if (blowObject)   blowObject.SetActive(true);
 
-        GameController.Instance.BlowOutCandle(candleIndex, this.transform);
-    }
+    // 👉 LED: candle is not lit → OFF
+    ArduinoLedController.Instance?.Off(candleIndex);
+
+    burnTween.Stop();
+
+    Tween.Delay(blowDuration).OnComplete(() => { if (blowObject) blowObject.SetActive(false); });
+
+    currentHeight = candleTop.localPosition.y;
+    reigniteTimer = Random.Range(MIN_IGNITE_DELAY, MAX_IGNITE_DELAY);
+
+    GameController.Instance.BlowOutCandle(candleIndex, this.transform);
+}
+
+
 
     protected void StopTween()
     {
@@ -204,6 +213,11 @@ internal class CandleBehaviour : MonoBehaviour
     protected void BurnOut()
     {
         GameController.Instance.LoseGame();
+        
+         // If we've already won (or lost), ignore late completions
+        if (GameController.Instance == null || GameController.Instance.GameOver) return;
+
+    GameController.Instance.LoseGame();
     }
 
     // ---------- warning visuals ----------
@@ -223,6 +237,7 @@ internal class CandleBehaviour : MonoBehaviour
         if (flameSprite != null)
             flameSprite.color = Color.Lerp(coolFlame, hotFlame, warn01);
     }
+
 
 #if UNITY_EDITOR
     private void OnValidate()

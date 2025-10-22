@@ -273,6 +273,12 @@ scoreText?.UpdateScore(0, 1);
 
         // Full reset after delay
         Invoke(nameof(ReloadScene), 15f);
+
+        // Only allow losing while actually playing
+        if (state != State.Playing || gameOver) return;
+
+        state = State.Lose;
+        gameOver = true;
     }
 
     // ------------------- Helpers -----------------------------
