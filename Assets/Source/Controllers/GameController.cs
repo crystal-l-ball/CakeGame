@@ -1,43 +1,50 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 internal class GameController : Singleton<GameController>
 {
-    // =================== READ-ONLY PROPERTIES ===================
-    public int CandlesBlownOut => candlesBlownOut;
+    // =================== READ-ONLY ===================
+    public int  CandlesBlownOut => candlesBlownOut;
     public bool GameOver => gameOver;
+
+    private System.Collections.IEnumerator BeginIgnitionAfterDelay(float seconds) {
+    yield return new WaitForSeconds(seconds);
+
+    // hide overlay
+    if (startOverlay) startOverlay.SetActive(false);
+
+    // tell all candles to ignite now
+    OnBeginIgnition?.Invoke();
+}
+
 
     // =================== SCREEN GROUPS ==========================
     [Header("Screen Groups (drag scene parents here)")]
-    [Tooltip("Idle screen parent: unlit cake, invite card, idle music, etc.")]
     [SerializeField] private GameObject idleGroup;
-    [Tooltip("Gameplay parent: lit cake, silhouettes, HUD (timer/score), etc.")]
     [SerializeField] private GameObject playGroup;
-    [Tooltip("Win screen parent: close-up cake, hooray text, balloons, etc.")]
     [SerializeField] private GameObject winGroup;
-    [Tooltip("Lose screen parent: your flipbook fire + smoke + fire VFX")]
     [SerializeField] private GameObject loseGroup;
+
+    [Header("Round Timer (balloon)")]
+    [SerializeField] private BalloonTimer balloonTimer;
+
+    [SerializeField] private GameObject startOverlay; // drag StartOverlay here in Inspector
+
+public event System.Action OnBeginIgnition; // candles will subscribe to this
+
 
     // =================== AUDIO ==============================
     [Header("Audio (drag AudioSources)")]
-    [Tooltip("Loops during Idle")]
-    [SerializeField] private AudioSource idleMusic;
-    [Tooltip("Main game song (NON-loop). Round length = 2 × this clip length.")]
-    [SerializeField] private AudioSource gameMusic;
+    [SerializeField] private AudioSource idleMusic;  // loops during Idle
+    [SerializeField] private AudioSource gameMusic;  // main song (NO loop)
 
-    // =================== HUD / UI ===========================
-    [Header("HUD (optional)")]
-    [Tooltip("Timer bar controller (Image Fill). Leave empty if not made yet.")]
-    [SerializeField] private TimerBarBehaviour timerBar;
-    [Tooltip("Score text controller (optional). Leave empty if not made yet.")]
+    // =================== OPTIONAL UI =========================
+    [Header("Score (optional)")]
     [SerializeField] private ScoreTextBehaviour scoreText;
-
-    [Header("Scoring (optional)")]
     [SerializeField] private int pointsPerCandle = 10;
-    private int score;
 
     // =================== LOSE VFX ===========================
     [Header("Lose VFX (optional)")]
-    [Tooltip("ParticleSystem for looping smoke on lose. Leave empty if not used.")]
     [SerializeField] private ParticleSystem loseSmoke;
 
     // =================== COLORS =============================
@@ -45,20 +52,19 @@ internal class GameController : Singleton<GameController>
     [SerializeField] private Color normalColor = Color.black;
     [SerializeField] private Color loseColor   = Color.black;
 
-    // =================== (Your existing objects) ============
+    // =================== EXISTING OBJECTS (optional) ========
     [Header("Existing Music Parents (optional)")]
-    [Tooltip("Your scene's regular music parent. Safe to leave null.")]
     [SerializeField] private GameObject musicParent;
-    [Tooltip("Your scene's victory music parent. Safe to leave null.")]
     [SerializeField] private GameObject victoryMusicParent;
 
     // =================== GAME TIMING ========================
-    [Header("Game Timing (auto sets from song)")]
-    [SerializeField] private float levelDuration; // set to 2× song length on StartGame
+    [Header("Game Timing (auto set from song)")]
+    [SerializeField] private float levelDuration; // set to 1× song length on StartGame
     private float currentTimer;
 
     // =================== INTERNAL STATE =====================
     private int  candlesBlownOut;
+    private int  score;
     private bool gameOver;
 
     public event GameOver OnGameOver;
@@ -66,7 +72,7 @@ internal class GameController : Singleton<GameController>
     private enum State { Idle, Playing, Win, Lose }
     private State state = State.Idle;
 
-    private static PlayerControls playerControls; // uses your Input Actions map
+    private static PlayerControls playerControls; // your Input Actions map
 
     // ------------------- Unity -------------------------------
     private void Start()
@@ -102,23 +108,18 @@ internal class GameController : Singleton<GameController>
 
                 currentTimer += Time.deltaTime;
 
-                // Timer bar from 1 -> 0
-                if (levelDuration > 0f)
-                {
-                    float p = Mathf.Clamp01(1f - (currentTimer / levelDuration));
-                    timerBar?.SetFill01(p);
-                }
-
-                // Win when song finished (2 loops) or timer ran out
+                // Win when song finished (backup: timer exceeded)
                 if (currentTimer >= levelDuration || (gameMusic && !gameMusic.isPlaying))
                 {
                     WinGame();
                 }
                 break;
 
+
+
             case State.Win:
             case State.Lose:
-                // Wait for auto-return to Idle
+                // Waiting for auto-return to Idle (we reload scene instead)
                 break;
         }
     }
@@ -129,6 +130,7 @@ internal class GameController : Singleton<GameController>
         state = State.Idle;
         gameOver = false;
         candlesBlownOut = 0;
+        score = 0;
         currentTimer = 0f;
 
         if (Camera.main) Camera.main.backgroundColor = normalColor;
@@ -153,8 +155,10 @@ internal class GameController : Singleton<GameController>
         // VFX reset
         ResetLoseSmoke();
 
-        // HUD reset
-        timerBar?.SetFill01(1f);
+        // Balloon back to bottom & hidden
+        balloonTimer?.ResetBalloon();
+
+        // Score reset
         scoreText?.UpdateScore(0, 1);
     }
 
@@ -163,6 +167,7 @@ internal class GameController : Singleton<GameController>
         state = State.Playing;
         gameOver = false;
         candlesBlownOut = 0;
+        score = 0;
         currentTimer = 0f;
 
         if (idleGroup) idleGroup.SetActive(false);
@@ -180,36 +185,49 @@ internal class GameController : Singleton<GameController>
             gameMusic.loop = false;
             gameMusic.time = 0f;
             gameMusic.Play();
-
-            if (gameMusic.clip != null)
-                levelDuration = gameMusic.clip.length * 2f; // 2 loops
+            // ONE play of the song:
+            levelDuration = (gameMusic.clip != null) ? gameMusic.clip.length : 44f;
+        }
+        else
+        {
+            levelDuration = 44f; // fallback if no clip assigned
         }
 
-        timerBar?.SetFill01(1f);
-        scoreText?.UpdateScore(0, 1);
+// start the balloon timer for the round length
+balloonTimer?.Begin(levelDuration);
+
+// >>> SHOW OVERLAY & START 5s DELAY <<<
+if (startOverlay) {
+    startOverlay.SetActive(true);
+}
+StartCoroutine(BeginIgnitionAfterDelay(5f));
+
+// Score reset (keep if you want)
+scoreText?.UpdateScore(0, 1);
     }
 
     // ------------------- Existing hooks ----------------------
-
-    // ← added back: no-argument version that older calls use
     public void BlowOutCandle()
     {
         candlesBlownOut++;
-        CandleCounterBehaviour.Instance.UpdateCount(candlesBlownOut);
+
+        // NULL-SAFE: counter UI might not exist in this scene
+        var counter = CandleCounterBehaviour.Instance;
+        if (counter != null)
+            counter.UpdateCount(candlesBlownOut);
+        // else: no counter UI; skip
     }
 
-    // New overload used by CandleBehaviour to spawn decorations
+    // Used by CandleBehaviour to spawn decorations + score
     public void BlowOutCandle(int candleIndex, Transform candleRoot)
     {
-        // keep old behavior
-        BlowOutCandle();
+        BlowOutCandle(); // preserves your old behavior, now null-safe
 
-        // spawn 1 random decoration at this candle
         DecorationManager.Instance?.SpawnAt(candleRoot);
 
         // optional scoring
         score += pointsPerCandle;
-        scoreText?.UpdateScore(score, 1); // multiplier=1 for now
+        scoreText?.UpdateScore(score, 1); // multiplier = 1 for now
     }
 
     public void WinGame()
@@ -226,8 +244,8 @@ internal class GameController : Singleton<GameController>
 
         OnGameOver?.Invoke();
 
-        // Return to Idle after 15 seconds
-        Invoke(nameof(EnterIdle), 15f);
+        // Full reset after delay
+        Invoke(nameof(ReloadScene), 15f);
     }
 
     public void LoseGame()
@@ -253,8 +271,8 @@ internal class GameController : Singleton<GameController>
 
         OnGameOver?.Invoke();
 
-        // Return to Idle after 15 seconds
-        Invoke(nameof(EnterIdle), 15f);
+        // Full reset after delay
+        Invoke(nameof(ReloadScene), 15f);
     }
 
     // ------------------- Helpers -----------------------------
@@ -265,6 +283,11 @@ internal class GameController : Singleton<GameController>
         em.rateOverTime = 0f;
         loseSmoke.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         loseSmoke.gameObject.SetActive(false);
+    }
+
+    private void ReloadScene() {
+        var current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.buildIndex);
     }
 }
 

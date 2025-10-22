@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: f401b3c0284583d4887c2ba0bbb42765
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8083353638218530473
+    second: UnhappyBirthday_0
+  - first:
+      213: -4878579644728896197
+    second: UnhappyBirthday_1
+  - first:
+      213: 1198148372914330844
+    second: UnhappyBirthday_2
+  - first:
+      213: -1259974103373680454
+    second: UnhappyBirthday_3
+  - first:
+      213: -7501956199911166165
+    second: UnhappyBirthday_4
+  - first:
+      213: 3194570666403427769
+    second: UnhappyBirthday_5
+  - first:
+      213: -3036205205393297632
+    second: UnhappyBirthday_6
+  - first:
+      213: -2142479640055762921
+    second: UnhappyBirthday_7
+  - first:
+      213: 6919213968232884613
+    second: UnhappyBirthday_8
+  - first:
+      213: 3988746693696262210
+    second: UnhappyBirthday_9
+  - first:
+      213: 5041617682431974614
+    second: UnhappyBirthday_10
+  - first:
+      213: -1119251039539794084
+    second: UnhappyBirthday_11
+  - first:
+      213: -6729710710101391110
+    second: UnhappyBirthday_12
+  - first:
+      213: 9078655490303561681
+    second: UnhappyBirthday_13
+  - first:
+      213: 8765026625125170332
+    second: UnhappyBirthday_14
+  - first:
+      213: -3561880121389498134
+    second: UnhappyBirthday_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UnhappyBirthday_0
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 485
+        width: 182
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae70e77e47dd2070800000000000000
+      internalID: 8083353638218530473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_1
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 472
+        width: 179
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b359b7339adcb4cb0800000000000000
+      internalID: -4878579644728896197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 465
+        width: 157
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc55cbd89da0a010800000000000000
+      internalID: 1198148372914330844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 467
+        width: 154
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab078368a3ca38ee0800000000000000
+      internalID: -1259974103373680454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_4
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 490
+        width: 144
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f61cf4592b3e790800000000000000
+      internalID: -7501956199911166165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_5
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 506
+        width: 153
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5fbd47815655c20800000000000000
+      internalID: 3194570666403427769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_6
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 470
+        width: 180
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f2753c37b3dd5d0800000000000000
+      internalID: -3036205205393297632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 199
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71038f36e126442e0800000000000000
+      internalID: -2142479640055762921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_8
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 385
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589217dc17cf50060800000000000000
+      internalID: 6919213968232884613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 87
+        width: 125
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24097c01cffda5730800000000000000
+      internalID: 3988746693696262210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_10
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 124
+        width: 219
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc9fae029c67f540800000000000000
+      internalID: 5041617682431974614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_11
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 102
+        width: 198
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f6ebd0c1f9770f0800000000000000
+      internalID: -1119251039539794084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_12
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 106
+        width: 239
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8c343c3c34b92a0800000000000000
+      internalID: -6729710710101391110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 139
+        width: 237
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df81b1511dddfd70800000000000000
+      internalID: 9078655490303561681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_14
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 46
+        width: 221
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c3d65c641a3a970800000000000000
+      internalID: 8765026625125170332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnhappyBirthday_15
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 0
+        width: 209
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0cd08b6e8a19ec0800000000000000
+      internalID: -3561880121389498134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UnhappyBirthday_0: 8083353638218530473
+      UnhappyBirthday_1: -4878579644728896197
+      UnhappyBirthday_10: 5041617682431974614
+      UnhappyBirthday_11: -1119251039539794084
+      UnhappyBirthday_12: -6729710710101391110
+      UnhappyBirthday_13: 9078655490303561681
+      UnhappyBirthday_14: 8765026625125170332
+      UnhappyBirthday_15: -3561880121389498134
+      UnhappyBirthday_2: 1198148372914330844
+      UnhappyBirthday_3: -1259974103373680454
+      UnhappyBirthday_4: -7501956199911166165
+      UnhappyBirthday_5: 3194570666403427769
+      UnhappyBirthday_6: -3036205205393297632
+      UnhappyBirthday_7: -2142479640055762921
+      UnhappyBirthday_8: 6919213968232884613
+      UnhappyBirthday_9: 3988746693696262210
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

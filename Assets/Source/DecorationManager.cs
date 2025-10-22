@@ -1,26 +1,32 @@
 using UnityEngine;
+using PrimeTween;
+using System.Collections.Generic;
 
-internal class DecorationManager : Singleton<DecorationManager>
-{
+internal class DecorationManager : Singleton<DecorationManager> {
+    [Header("Prefabs")]
     [SerializeField] private GameObject[] decorationPrefabs;
 
-    [Header("Spawn Scatter (WORLD units)")]
-    [SerializeField, Min(0f)] private float spawnRadius = 0.12f;     // world radius around the anchor
-    [SerializeField, Min(0f)] private float minSeparation = 0.05f;   // world min distance between toppings
-    [SerializeField, Range(1, 30)] private int maxTries = 12;        // attempts to find a non-overlapping spot
+    [Header("Spawn Scatter (around anchor, local units)")]
+    [SerializeField, Min(0f)] private float spawnRadius = 0.12f;
+    [SerializeField, Min(0f)] private float minSeparation = 0.05f;
+    [SerializeField, Range(1, 30)] private int maxTries = 12;
 
-    /// <summary>
-    /// Spawn one random decoration around this candle's DecorationAnchor (creates the anchor if missing).
-    /// Placement is done in WORLD SPACE so parent scale/rotation won't distort it.
-    /// </summary>
-    public void SpawnAt(Transform candleRoot)
-    {
-        if (candleRoot == null || decorationPrefabs == null || decorationPrefabs.Length == 0) return;
+    [Header("Arrival Motion (world units / seconds)")]
+    [SerializeField] private float flyDistance = 3.0f;
+    [SerializeField] private Vector2 flyTimeRange = new Vector2(0.6f, 1.0f);
+    [SerializeField] private float spinDegrees = 360f;
+    [SerializeField] private bool fromAllDirections = true;
+    [SerializeField] private Ease landEase = Ease.OutCubic;
 
-        // Find (or create) the anchor under this candle
+    public void SpawnAt(Transform candleRoot) {
+        if (candleRoot == null) { Debug.LogWarning("SpawnAt: candleRoot is null"); return; }
+        if (decorationPrefabs == null || decorationPrefabs.Length == 0) {
+            Debug.LogWarning("SpawnAt: decorationPrefabs is empty on DecorationManager"); return;
+        }
+
+        // anchor
         Transform anchor = candleRoot.Find("DecorationAnchor");
-        if (anchor == null)
-        {
+        if (anchor == null) {
             var anchorGO = new GameObject("DecorationAnchor");
             anchor = anchorGO.transform;
             anchor.SetParent(candleRoot);
@@ -29,59 +35,88 @@ internal class DecorationManager : Singleton<DecorationManager>
             anchor.localScale = Vector3.one;
         }
 
-        // Choose a prefab
+        // pick prefab
         var prefab = decorationPrefabs[Random.Range(0, decorationPrefabs.Length)];
-        if (prefab == null) return;
+        if (prefab == null) { Debug.LogWarning("SpawnAt: picked prefab is null (Missing entry?)"); return; }
 
-        // ---- WORLD-SPACE placement around the anchor ----
-        Vector3 chosenWorld = anchor.position;
+        // pick landing spot near anchor (local)
+        Vector3 localPos = Vector3.zero;
         bool found = false;
-        for (int i = 0; i < maxTries; i++)
-        {
-            Vector2 r = Random.insideUnitCircle * spawnRadius;   // radius in world units
-            Vector3 candidateWorld = anchor.position + new Vector3(r.x, r.y, 0f);
-
-            if (IsFarEnoughFromOthersWorld(anchor, candidateWorld))
-            {
-                chosenWorld = candidateWorld;
-                found = true;
-                break;
-            }
+        for (int i = 0; i < maxTries; i++) {
+            Vector2 r = Random.insideUnitCircle * spawnRadius;
+            localPos = new Vector3(r.x, r.y, 0f);
+            if (IsFarEnoughFromOthers(anchor, localPos)) { found = true; break; }
         }
-        if (!found)
-        {
-            // fallback: tiny jitter near center (world units)
+        if (!found) {
             Vector2 r = Random.insideUnitCircle * (minSeparation * 0.5f);
-            chosenWorld = anchor.position + new Vector3(r.x, r.y, 0f);
+            localPos = new Vector3(r.x, r.y, 0f);
         }
 
-        // Instantiate unparented in world, then parent while keeping world position
-        var decorGO = Instantiate(prefab);
-        decorGO.transform.position = chosenWorld;
-        decorGO.transform.rotation = Quaternion.identity;
-        decorGO.transform.localScale = Vector3.one; // neutral
-        decorGO.transform.SetParent(anchor, true);  // keep world pos/rot/scale
+        // instantiate under anchor
+        var go = Instantiate(prefab, anchor);
+        var targetWorld = anchor.TransformPoint(localPos);
 
-        // Small random variety
+        // choose start point (world) some distance away
+        Vector3 dir = fromAllDirections
+            ? (Vector3)(Random.insideUnitCircle.normalized)
+            : Vector3.up;
+        Vector3 startWorld = targetWorld + dir * flyDistance;
+
+        // place at start; set initial alpha = 0
+        go.transform.position = startWorld;
+        SetAlpha(go, 0f);
+
+        // random scale & spin
         float s = Random.Range(0.9f, 1.15f);
-        decorGO.transform.localScale *= s;
-        decorGO.transform.Rotate(0f, 0f, Random.Range(0f, 360f));
+        go.transform.localScale = new Vector3(s, s, 1f);
+        float startZ = go.transform.eulerAngles.z;
+        float spin = spinDegrees * (Random.value < 0.5f ? -1f : 1f);
 
-        // Ensure toppings render above cake
-        var sr = decorGO.GetComponentInChildren<SpriteRenderer>();
-        if (sr) sr.sortingOrder += 2;
+        // ensure on top of cake
+        var srMain = go.GetComponentInChildren<SpriteRenderer>();
+        if (srMain) srMain.sortingOrder += 2;
+
+        float t = Random.Range(flyTimeRange.x, flyTimeRange.y);
+
+        // ------ tweens (no Tween.To) ------
+        Tween.Position(go.transform, targetWorld, t, landEase);
+
+        // If your PrimeTween lacks LocalRotation(Vector3), use Quaternion overload:
+        Tween.LocalRotation(go.transform, Quaternion.Euler(0f, 0f, startZ + spin), t, landEase);
+
+        // Fade-in each SpriteRenderer
+        var renderers = go.GetComponentsInChildren<SpriteRenderer>(true);
+        for (int i = 0; i < renderers.Length; i++) {
+            // make sure they start invisible (in case prefab wasn't)
+            var c = renderers[i].color; c.a = 0f; renderers[i].color = c;
+            Tween.Alpha(renderers[i], 1f, t, landEase);
+        }
+        // ----------------------------------
+
+        // safety: ensure exact local landing even if parent moves slightly during flight
+        Tween.Delay(t).OnComplete(() => {
+            go.transform.localPosition = localPos;
+        });
     }
 
-    // Distance check in WORLD space (matches the new placement)
-    private bool IsFarEnoughFromOthersWorld(Transform anchor, Vector3 candidateWorld)
-    {
-        for (int i = 0; i < anchor.childCount; i++)
-        {
+    private bool IsFarEnoughFromOthers(Transform anchor, Vector3 candidateLocal) {
+        for (int i = 0; i < anchor.childCount; i++) {
             var child = anchor.GetChild(i);
-            if (!child) continue;
-            float d = Vector2.Distance((Vector2)child.position, (Vector2)candidateWorld);
+            if (child == null) continue;
+            float d = Vector2.Distance((Vector2)child.localPosition, (Vector2)candidateLocal);
             if (d < minSeparation) return false;
         }
         return true;
+    }
+
+    // Utility: set alpha for all child SpriteRenderers
+    static readonly List<SpriteRenderer> _cache = new List<SpriteRenderer>(8);
+    private void SetAlpha(GameObject go, float a) {
+        _cache.Clear();
+        go.GetComponentsInChildren(_cache);
+        for (int i = 0; i < _cache.Count; i++) {
+            var r = _cache[i];
+            var c = r.color; c.a = a; r.color = c;
+        }
     }
 }
