@@ -2,12 +2,14 @@ using UnityEngine;
 using PrimeTween;
 using System.Collections.Generic;
 
-internal class DecorationManager : Singleton<DecorationManager> {
+internal class DecorationManager : Singleton<DecorationManager>
+{
     [Header("Prefabs")]
     [SerializeField] private GameObject[] decorationPrefabs;
 
     [Header("Spawn Scatter (around anchor, local units)")]
     [SerializeField, Min(0f)] private float spawnRadius = 0.12f;
+    
     [SerializeField, Min(0f)] private float minSeparation = 0.05f;
     [SerializeField, Range(1, 30)] private int maxTries = 12;
 
@@ -18,15 +20,24 @@ internal class DecorationManager : Singleton<DecorationManager> {
     [SerializeField] private bool fromAllDirections = true;
     [SerializeField] private Ease landEase = Ease.OutCubic;
 
-    public void SpawnAt(Transform candleRoot) {
+    [SerializeField] private bool emitPopText = true; // toggle in Inspector
+    private int totalSprinkles = 0;
+    public int TotalSprinkles => totalSprinkles;
+
+
+    public void SpawnAt(Transform candleRoot)
+    {
         if (candleRoot == null) { Debug.LogWarning("SpawnAt: candleRoot is null"); return; }
-        if (decorationPrefabs == null || decorationPrefabs.Length == 0) {
+        if (decorationPrefabs == null || decorationPrefabs.Length == 0)
+        
+        {
             Debug.LogWarning("SpawnAt: decorationPrefabs is empty on DecorationManager"); return;
         }
 
         // anchor
         Transform anchor = candleRoot.Find("DecorationAnchor");
-        if (anchor == null) {
+        if (anchor == null)
+        {
             var anchorGO = new GameObject("DecorationAnchor");
             anchor = anchorGO.transform;
             anchor.SetParent(candleRoot);
@@ -42,12 +53,14 @@ internal class DecorationManager : Singleton<DecorationManager> {
         // pick landing spot near anchor (local)
         Vector3 localPos = Vector3.zero;
         bool found = false;
-        for (int i = 0; i < maxTries; i++) {
+        for (int i = 0; i < maxTries; i++)
+        {
             Vector2 r = Random.insideUnitCircle * spawnRadius;
             localPos = new Vector3(r.x, r.y, 0f);
             if (IsFarEnoughFromOthers(anchor, localPos)) { found = true; break; }
         }
-        if (!found) {
+        if (!found)
+        {
             Vector2 r = Random.insideUnitCircle * (minSeparation * 0.5f);
             localPos = new Vector3(r.x, r.y, 0f);
         }
@@ -86,7 +99,8 @@ internal class DecorationManager : Singleton<DecorationManager> {
 
         // Fade-in each SpriteRenderer
         var renderers = go.GetComponentsInChildren<SpriteRenderer>(true);
-        for (int i = 0; i < renderers.Length; i++) {
+        for (int i = 0; i < renderers.Length; i++)
+        {
             // make sure they start invisible (in case prefab wasn't)
             var c = renderers[i].color; c.a = 0f; renderers[i].color = c;
             Tween.Alpha(renderers[i], 1f, t, landEase);
@@ -94,13 +108,26 @@ internal class DecorationManager : Singleton<DecorationManager> {
         // ----------------------------------
 
         // safety: ensure exact local landing even if parent moves slightly during flight
-        Tween.Delay(t).OnComplete(() => {
+        Tween.Delay(t).OnComplete(() =>
+        {
             go.transform.localPosition = localPos;
         });
+        // Count & pop text
+totalSprinkles++;
+
+if (emitPopText) {
+    // Where to show the popup: near where it lands
+    Vector3 worldPos = anchor.TransformPoint(localPos);
+    // Smaller pop per single sprinkle; tweak 'big' to true if you want bigger
+    BonusUI.Instance?.PopSprinklesBottomCenter($"{totalSprinkles} Sprinkles!", big: false);
+}
+
     }
 
-    private bool IsFarEnoughFromOthers(Transform anchor, Vector3 candidateLocal) {
-        for (int i = 0; i < anchor.childCount; i++) {
+    private bool IsFarEnoughFromOthers(Transform anchor, Vector3 candidateLocal)
+    {
+        for (int i = 0; i < anchor.childCount; i++)
+        {
             var child = anchor.GetChild(i);
             if (child == null) continue;
             float d = Vector2.Distance((Vector2)child.localPosition, (Vector2)candidateLocal);
@@ -111,12 +138,27 @@ internal class DecorationManager : Singleton<DecorationManager> {
 
     // Utility: set alpha for all child SpriteRenderers
     static readonly List<SpriteRenderer> _cache = new List<SpriteRenderer>(8);
-    private void SetAlpha(GameObject go, float a) {
+    private void SetAlpha(GameObject go, float a)
+    {
         _cache.Clear();
         go.GetComponentsInChildren(_cache);
-        for (int i = 0; i < _cache.Count; i++) {
+        for (int i = 0; i < _cache.Count; i++)
+        {
             var r = _cache[i];
             var c = r.color; c.a = a; r.color = c;
         }
     }
+    // Spawn 'count' decorations at one candle
+public void SpawnManyAt(Transform candleRoot, int count) {
+    if (candleRoot == null) return;
+    for (int i = 0; i < count; i++) SpawnAt(candleRoot);
 }
+
+// Spawn 'count' decorations on ALL given candles
+public void SpawnManyOnAll(Transform[] candleRoots, int count) {
+    if (candleRoots == null) return;
+    foreach (var t in candleRoots) SpawnManyAt(t, count);
+}
+
+}
+

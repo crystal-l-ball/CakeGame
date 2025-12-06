@@ -1,137 +1,166 @@
-using UnityEngine;
-using UnityEngine.InputSystem;   // NEW input system
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
+
+using System;
 using System.IO.Ports;
+using System.Collections;
+using UnityEngine;
 
 public class ArduinoLedController : MonoBehaviour {
     public static ArduinoLedController Instance { get; private set; }
-
     [Header("Serial settings")]
-    [Tooltip("Windows: COM3, COM6, etc.")]
-    [SerializeField] private string portName = "COM6";
+    [SerializeField] private string preferredPort = "COM5";
     [SerializeField] private int baud = 115200;
+    [SerializeField] private bool onlyUsePreferred = true;
 
-    [Header("Debug / bring-up")]
+    [Header("Debug")]
     [SerializeField] private bool enableDebugKeys = true;
-    [Tooltip("Send a quick test sequence on Start so you see the LEDs react.")]
-    [SerializeField] private bool pingOnStart = true;
+    [SerializeField] private bool pingOnConnect = false;   // keep OFF for Leonardo stability
+    [SerializeField] private int  postOpenDelayMs = 1200;  // Leonardo needs a longer wait after DTR
 
     private SerialPort port;
-    private bool readyToSend = false;    // Leonardo needs a short moment after open
+    private bool connected;
 
-    private void Awake() {
+    private void Awake()
+    {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
     private void Start() {
-        TryOpen();
-        // Give Leonardo a moment to come out of reset after opening the port
-        Invoke(nameof(MarkReady), 1.0f);   // 1s is safe
-        if (pingOnStart) Invoke(nameof(PingTest), 1.2f);
+        StartCoroutine(OpenOnce());
     }
 
-    private void MarkReady() => readyToSend = true;
+    private IEnumerator OpenOnce() {
+        yield return null; // let one frame pass
 
-    private void OnApplicationQuit() { TryClose(); }
-
-private void TryOpen() {
-    // First try the configured port
-    if (OpenAndPing(portName)) return;
-
-    // Fallback: scan all ports
-    foreach (var pn in System.IO.Ports.SerialPort.GetPortNames()) {
-        if (pn == portName) continue;
-        if (OpenAndPing(pn)) { portName = pn; return; }
-    }
-    Debug.LogWarning("ArduinoLedController: no responding COM port found.");
-}
-
-private bool OpenAndPing(string pn) {
-    try {
-        var p = new System.IO.Ports.SerialPort(pn, baud) { NewLine = "\n", DtrEnable = true, ReadTimeout = 250 };
-        p.Open();
-        // small delay for Leonardo reset
-        System.Threading.Thread.Sleep(400);
-        // ping
-        p.Write("P\n");
-        string reply = p.ReadLine(); // expect "OK"
-        if (reply.Trim() == "OK") {
-            // success: keep this port
-            if (port != null && port.IsOpen) port.Close();
-            port = p;
-            Debug.Log($"ArduinoLedController: Connected to {pn} @ {baud}");
-            return true;
-        }
-        p.Close();
-    } catch { /* ignore & try next */ }
-    return false;
-}
-
-
-    private void TryClose() {
+        SafeClose();
         try {
-            if (port != null) {
-                if (port.IsOpen) port.Close();
-                port.Dispose();
-                port = null;
+            // Create then configure (safer across Unity/C# versions)
+            var sp = new SerialPort(preferredPort, baud);
+            sp.NewLine      = "\n";
+            sp.DtrEnable    = true;   // toggles reset on Leonardo
+            sp.RtsEnable    = false;
+            sp.ReadTimeout  = 1000;
+            sp.WriteTimeout = 300;
+
+            sp.Open();
+            port = sp;
+
+            // Leonardo re-enumerates after DTR: wait a bit longer
+            float t0 = Time.realtimeSinceStartup;
+            while (Time.realtimeSinceStartup - t0 < (postOpenDelayMs / 1000f)) { /* busy wait */ }
+
+            if (pingOnConnect) {
+                try {
+                    port.DiscardInBuffer();
+                    port.Write("P\n");
+                    string reply = port.ReadLine().Trim();
+                    if (reply != "OK") Debug.LogWarning($"Arduino: ping got '{reply}'");
+                } catch (Exception ex) {
+                    Debug.LogWarning($"Arduino: ping failed: {ex.Message}");
+                }
             }
-        } catch { }
+
+            connected = true;
+            Debug.Log($"Arduino: connected on {preferredPort}");
+        }
+        catch (Exception e) {
+            connected = false;
+            Debug.LogWarning($"Arduino: open {preferredPort} failed: {e.Message}");
+            SafeClose();
+        }
     }
 
-    private void Send(int candleIndex1to5, char cmd) {
-        if (!readyToSend || port == null || !port.IsOpen) return;
-        if (candleIndex1to5 < 1 || candleIndex1to5 > 5) return;
-        try {
-            port.Write(candleIndex1to5.ToString());
+    private void OnApplicationQuit() => SafeClose();
+    private void OnDestroy()         => SafeClose();
+
+    private void SafeClose() {
+        try { if (port != null && port.IsOpen) port.Close(); } catch {}
+        try { if (port != null) port.Dispose(); } catch {}
+        port = null;
+        connected = false;
+    }
+
+    // ------------ SEND ------------
+    private void Send(int idx, char cmd)
+    {
+        if (!connected || port == null || !port.IsOpen) return;
+        if (idx < 1 || idx > 5) return;
+        try
+        {
+            port.Write(idx.ToString());
             port.Write(cmd.ToString());
             port.Write("\n");
-            // uncomment to see every command
-            // Debug.Log($"TX -> {candleIndex1to5}{cmd}");
-        } catch (System.Exception e) {
-            Debug.LogWarning($"ArduinoLedController: send failed: {e.Message}");
+            Debug.Log($"TX {idx}{cmd}");
+        }
+        catch (Exception)
+        {
+            SafeClose(); // drop connection if write failed
         }
     }
+    
+        public void LedFlicker(int idx) => Send(idx, 'F'); // “ignite” (flicker)
+    public void LedOn(int idx)      => Send(idx, 'N'); // steady on
+    public void LedOff(int idx)     => Send(idx, 'O'); // off
 
-    // Public API for your candles
-    public void Flicker(int candleIndex1to5) => Send(candleIndex1to5, 'F');
-    public void OnSteady(int candleIndex1to5) => Send(candleIndex1to5, 'N');
-    public void Off(int candleIndex1to5)      => Send(candleIndex1to5, 'O');
-
-    // Built-in bring-up test (turns LED1: flicker→on→off)
-    private void PingTest() {
-        Flicker(1);
-        Invoke(nameof(_on1), 0.6f);
-        Invoke(nameof(_off1), 1.2f);
-    }
-    private void _on1()  => OnSteady(1);
-    private void _off1() => Off(1);
-
-    // NEW INPUT SYSTEM hotkeys (optional)
+    // ------------ Debug keys (hold Shift/Ctrl, then tap number) ------------
     private void Update() {
-        if (!enableDebugKeys) return;
-        var kb = Keyboard.current;
-        if (kb == null) return;
+    if (!enableDebugKeys) return;
 
-        if (kb.digit1Key.wasPressedThisFrame) Flicker(1);
-        if (kb.digit2Key.wasPressedThisFrame) Flicker(2);
-        if (kb.digit3Key.wasPressedThisFrame) Flicker(3);
-        if (kb.digit4Key.wasPressedThisFrame) Flicker(4);
-        if (kb.digit5Key.wasPressedThisFrame) Flicker(5);
+#if ENABLE_INPUT_SYSTEM
+    var kb = Keyboard.current;
+    if (kb == null) return;
 
-        bool shift = kb.leftShiftKey.isPressed || kb.rightShiftKey.isPressed;
-        bool ctrl  = kb.leftCtrlKey.isPressed  || kb.rightCtrlKey.isPressed;
+    // 1
+    if (kb.digit1Key.wasPressedThisFrame) Send(1, 'F');
+    if (kb.leftShiftKey.isPressed && kb.digit1Key.wasPressedThisFrame) Send(1, 'N');
+    if (kb.leftCtrlKey .isPressed && kb.digit1Key.wasPressedThisFrame) Send(1, 'O');
 
-        if (shift && kb.digit1Key.wasPressedThisFrame) OnSteady(1);
-        if (shift && kb.digit2Key.wasPressedThisFrame) OnSteady(2);
-        if (shift && kb.digit3Key.wasPressedThisFrame) OnSteady(3);
-        if (shift && kb.digit4Key.wasPressedThisFrame) OnSteady(4);
-        if (shift && kb.digit5Key.wasPressedThisFrame) OnSteady(5);
+    // 2
+    if (kb.digit2Key.wasPressedThisFrame) Send(2, 'F');
+    if (kb.leftShiftKey.isPressed && kb.digit2Key.wasPressedThisFrame) Send(2, 'N');
+    if (kb.leftCtrlKey .isPressed && kb.digit2Key.wasPressedThisFrame) Send(2, 'O');
 
-        if (ctrl && kb.digit1Key.wasPressedThisFrame) Off(1);
-        if (ctrl && kb.digit2Key.wasPressedThisFrame) Off(2);
-        if (ctrl && kb.digit3Key.wasPressedThisFrame) Off(3);
-        if (ctrl && kb.digit4Key.wasPressedThisFrame) Off(4);
-        if (ctrl && kb.digit5Key.wasPressedThisFrame) Off(5);
-    }
+    // 3
+    if (kb.digit3Key.wasPressedThisFrame) Send(3, 'F');
+    if (kb.leftShiftKey.isPressed && kb.digit3Key.wasPressedThisFrame) Send(3, 'N');
+    if (kb.leftCtrlKey .isPressed && kb.digit3Key.wasPressedThisFrame) Send(3, 'O');
+
+    // 4
+    if (kb.digit4Key.wasPressedThisFrame) Send(4, 'F');
+    if (kb.leftShiftKey.isPressed && kb.digit4Key.wasPressedThisFrame) Send(4, 'N');
+    if (kb.leftCtrlKey .isPressed && kb.digit4Key.wasPressedThisFrame) Send(4, 'O');
+
+    // 5
+    if (kb.digit5Key.wasPressedThisFrame) Send(5, 'F');
+    if (kb.leftShiftKey.isPressed && kb.digit5Key.wasPressedThisFrame) Send(5, 'N');
+    if (kb.leftCtrlKey .isPressed && kb.digit5Key.wasPressedThisFrame) Send(5, 'O');
+
+#else
+    // Legacy Input Manager (works if Active Input Handling = Both or Old)
+    if (Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'F');
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'N');
+    if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'O');
+
+    if (Input.GetKeyDown(KeyCode.Alpha2)) Send(2, 'F');
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha2)) Send(2, 'N');
+    if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha2)) Send(2, 'O');
+
+    if (Input.GetKeyDown(KeyCode.Alpha3)) Send(3, 'F');
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha3)) Send(3, 'N');
+    if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha3)) Send(3, 'O');
+
+    if (Input.GetKeyDown(KeyCode.Alpha4)) Send(4, 'F');
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha4)) Send(4, 'N');
+    if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha4)) Send(4, 'O');
+
+    if (Input.GetKeyDown(KeyCode.Alpha5)) Send(5, 'F');
+    if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha5)) Send(5, 'N');
+    if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha5)) Send(5, 'O');
+#endif
+}
+
 }

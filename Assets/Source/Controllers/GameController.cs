@@ -5,18 +5,7 @@ internal class GameController : Singleton<GameController>
 {
     // =================== READ-ONLY ===================
     public int  CandlesBlownOut => candlesBlownOut;
-    public bool GameOver => gameOver;
-
-    private System.Collections.IEnumerator BeginIgnitionAfterDelay(float seconds) {
-    yield return new WaitForSeconds(seconds);
-
-    // hide overlay
-    if (startOverlay) startOverlay.SetActive(false);
-
-    // tell all candles to ignite now
-    OnBeginIgnition?.Invoke();
-}
-
+    public bool GameOver        => gameOver;
 
     // =================== SCREEN GROUPS ==========================
     [Header("Screen Groups (drag scene parents here)")]
@@ -28,10 +17,13 @@ internal class GameController : Singleton<GameController>
     [Header("Round Timer (balloon)")]
     [SerializeField] private BalloonTimer balloonTimer;
 
+    [Header("Start Overlay")]
     [SerializeField] private GameObject startOverlay; // drag StartOverlay here in Inspector
 
-public event System.Action OnBeginIgnition; // candles will subscribe to this
-
+    // Events others can listen to
+    public event System.Action OnBeginIgnition; // candles subscribe to this for the delayed start
+    public event System.Action OnLose;          // crowd tint subscribes to this
+    public event GameOver      OnGameOver;
 
     // =================== AUDIO ==============================
     [Header("Audio (drag AudioSources)")]
@@ -67,14 +59,19 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
     private int  score;
     private bool gameOver;
 
-    public event GameOver OnGameOver;
-
     private enum State { Idle, Playing, Win, Lose }
     private State state = State.Idle;
 
     private static PlayerControls playerControls; // your Input Actions map
 
-    // ------------------- Unity -------------------------------
+    // ---------- Bonus plumbing (safe placeholders) ----------
+    [Header("Bonus Plumbing (optional)")]
+    [SerializeField] private CandleBehaviour[] candleRefs; // you can assign these later (A..G)
+    private float[] lastExtinguishTime = new float[5];
+    [SerializeField] private float bestieWindow = 0.25f;
+
+    // --------------------------------------------------------
+
     private void Start()
     {
         if (playerControls == null)
@@ -86,6 +83,8 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
 
         EnterIdle();
     }
+
+    
 
     private void Update()
     {
@@ -115,11 +114,9 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
                 }
                 break;
 
-
-
             case State.Win:
             case State.Lose:
-                // Waiting for auto-return to Idle (we reload scene instead)
+                // Waiting for auto-return (we reload scene after delay)
                 break;
         }
     }
@@ -132,6 +129,9 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
         candlesBlownOut = 0;
         score = 0;
         currentTimer = 0f;
+
+            BonusUI.Instance?.ClearPinnedPop();
+
 
         if (Camera.main) Camera.main.backgroundColor = normalColor;
 
@@ -160,6 +160,10 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
 
         // Score reset
         scoreText?.UpdateScore(0, 1);
+
+        // Reset crowd tint (use new API to avoid obsolete warning)
+        var crowd = Object.FindFirstObjectByType<CrowdTintOnLose>();
+        crowd?.ResetToOriginal();
     }
 
     private void StartGame()
@@ -193,17 +197,26 @@ public event System.Action OnBeginIgnition; // candles will subscribe to this
             levelDuration = 44f; // fallback if no clip assigned
         }
 
-// start the balloon timer for the round length
-balloonTimer?.Begin(levelDuration);
+        // Start the balloon timer for the round length
+        balloonTimer?.Begin(levelDuration);
 
-// >>> SHOW OVERLAY & START 5s DELAY <<<
-if (startOverlay) {
-    startOverlay.SetActive(true);
-}
-StartCoroutine(BeginIgnitionAfterDelay(5f));
+        // Show overlay & 5s delay before any ignition is allowed
+        if (startOverlay) startOverlay.SetActive(true);
+        StartCoroutine(BeginIgnitionAfterDelay(5f));
 
-// Score reset (keep if you want)
-scoreText?.UpdateScore(0, 1);
+        // Score reset
+        scoreText?.UpdateScore(0, 1);
+    }
+
+    private System.Collections.IEnumerator BeginIgnitionAfterDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        // hide overlay
+        if (startOverlay) startOverlay.SetActive(false);
+
+        // tell all candles to ignite now
+        OnBeginIgnition?.Invoke();
     }
 
     // ------------------- Existing hooks ----------------------
@@ -211,17 +224,16 @@ scoreText?.UpdateScore(0, 1);
     {
         candlesBlownOut++;
 
-        // NULL-SAFE: counter UI might not exist in this scene
+        // Counter UI might not exist in this scene
         var counter = CandleCounterBehaviour.Instance;
         if (counter != null)
             counter.UpdateCount(candlesBlownOut);
-        // else: no counter UI; skip
     }
 
     // Used by CandleBehaviour to spawn decorations + score
     public void BlowOutCandle(int candleIndex, Transform candleRoot)
     {
-        BlowOutCandle(); // preserves your old behavior, now null-safe
+        BlowOutCandle(); // preserves your old behavior
 
         DecorationManager.Instance?.SpawnAt(candleRoot);
 
@@ -230,11 +242,24 @@ scoreText?.UpdateScore(0, 1);
         scoreText?.UpdateScore(score, 1); // multiplier = 1 for now
     }
 
+    // Called by CandleBehaviour when a candle is blown out (for bonus timing/logic)
+    public void ReportExtinguish(int candleIndex, Transform candleRoot, float remaining01)
+    {
+        int i = Mathf.Clamp(candleIndex - 1, 0, lastExtinguishTime.Length - 1);
+        lastExtinguishTime[i] = Time.time;
+
+        // (Bonus logic can be added later using lastExtinguishTime & remaining01)
+        // Example: BonusUI.Instance?.FlashBonus(BonusType.CloseSave);
+    }
+
     public void WinGame()
     {
         if (state == State.Win) return;
         state = State.Win;
         gameOver = true;
+
+            BonusUI.Instance?.KeepLastPop();
+
 
         if (musicParent)        musicParent.SetActive(false);
         if (victoryMusicParent) victoryMusicParent.SetActive(true);
@@ -255,30 +280,24 @@ scoreText?.UpdateScore(0, 1);
         gameOver = true;
 
         if (musicParent) musicParent.SetActive(false);
-
         if (Camera.main) Camera.main.backgroundColor = loseColor;
+        if (loseGroup)   loseGroup.SetActive(true);
 
-        if (loseGroup) loseGroup.SetActive(true);
-
-        // Smoke VFX
         if (loseSmoke != null)
         {
             loseSmoke.gameObject.SetActive(true);
             var em = loseSmoke.emission;
-            em.rateOverTime = 80f; // adjust thickness
+            em.rateOverTime = 80f;
             loseSmoke.Play();
         }
+
+        // notify crowd to tint
+        OnLose?.Invoke();
 
         OnGameOver?.Invoke();
 
         // Full reset after delay
         Invoke(nameof(ReloadScene), 15f);
-
-        // Only allow losing while actually playing
-        if (state != State.Playing || gameOver) return;
-
-        state = State.Lose;
-        gameOver = true;
     }
 
     // ------------------- Helpers -----------------------------
@@ -291,7 +310,8 @@ scoreText?.UpdateScore(0, 1);
         loseSmoke.gameObject.SetActive(false);
     }
 
-    private void ReloadScene() {
+    private void ReloadScene()
+    {
         var current = SceneManager.GetActiveScene();
         SceneManager.LoadScene(current.buildIndex);
     }

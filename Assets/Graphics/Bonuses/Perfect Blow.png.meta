@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 08c6cc6b57a350449bde279b9b952e9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6334881157823422213
+    second: Perfect Blow_0
+  - first:
+      213: -2487415696360424949
+    second: Perfect Blow_1
+  - first:
+      213: 7305342644696184179
+    second: Perfect Blow_2
+  - first:
+      213: 2989672886428790043
+    second: Perfect Blow_3
+  - first:
+      213: -5250698430730269439
+    second: Perfect Blow_4
+  - first:
+      213: -2630058856924379063
+    second: Perfect Blow_5
+  - first:
+      213: -736084694415871946
+    second: Perfect Blow_6
+  - first:
+      213: -8364596990754143172
+    second: Perfect Blow_7
+  - first:
+      213: 3168172164850345014
+    second: Perfect Blow_8
+  - first:
+      213: -5477704879290610312
+    second: Perfect Blow_9
+  - first:
+      213: 2832576628827289016
+    second: Perfect Blow_10
+  - first:
+      213: -8462448992098083678
+    second: Perfect Blow_11
+  - first:
+      213: 8009704651222258549
+    second: Perfect Blow_12
+  - first:
+      213: 8383451952034526213
+    second: Perfect Blow_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Perfect Blow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1714
+        width: 274
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f516279d40ae750800000000000000
+      internalID: 6334881157823422213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1843
+        width: 243
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ab4b16a9cea7dd0800000000000000
+      internalID: -2487415696360424949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_2
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 184
+        width: 1780
+        height: 1714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375f0a31e6ac16560800000000000000
+      internalID: 7305342644696184179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_3
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 249
+        width: 1606
+        height: 1645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d643676a37d7920800000000000000
+      internalID: 2989672886428790043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_4
+      rect:
+        serializedVersion: 2
+        x: 3723
+        y: 912
+        width: 663
+        height: 970
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d0f9db895c127b0800000000000000
+      internalID: -5250698430730269439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_5
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 730
+        width: 595
+        height: 1077
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94807ae7767208bd0800000000000000
+      internalID: -2630058856924379063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_6
+      rect:
+        serializedVersion: 2
+        x: 4539
+        y: 1525
+        width: 364
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6307db0ded6e8c5f0800000000000000
+      internalID: -736084694415871946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 978
+        width: 213
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c344cccba5bfaeb80800000000000000
+      internalID: -8364596990754143172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_8
+      rect:
+        serializedVersion: 2
+        x: 4376
+        y: 1112
+        width: 566
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6346f295ccb97fb20800000000000000
+      internalID: 3168172164850345014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_9
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 656
+        width: 513
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87d85753f684bf3b0800000000000000
+      internalID: -5477704879290610312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 251
+        width: 376
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5f250bf655f4720800000000000000
+      internalID: 2832576628827289016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_11
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 141
+        width: 425
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac91284a775f8a80800000000000000
+      internalID: -8462448992098083678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_12
+      rect:
+        serializedVersion: 2
+        x: 3736
+        y: 197
+        width: 213
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57395eb61ff282f60800000000000000
+      internalID: 8009704651222258549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Perfect Blow_13
+      rect:
+        serializedVersion: 2
+        x: 4204
+        y: 147
+        width: 532
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504b2980221085470800000000000000
+      internalID: 8383451952034526213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Perfect Blow_0: 6334881157823422213
+      Perfect Blow_1: -2487415696360424949
+      Perfect Blow_10: 2832576628827289016
+      Perfect Blow_11: -8462448992098083678
+      Perfect Blow_12: 8009704651222258549
+      Perfect Blow_13: 8383451952034526213
+      Perfect Blow_2: 7305342644696184179
+      Perfect Blow_3: 2989672886428790043
+      Perfect Blow_4: -5250698430730269439
+      Perfect Blow_5: -2630058856924379063
+      Perfect Blow_6: -736084694415871946
+      Perfect Blow_7: -8364596990754143172
+      Perfect Blow_8: 3168172164850345014
+      Perfect Blow_9: -5477704879290610312
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
