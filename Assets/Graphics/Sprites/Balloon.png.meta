@@ -103,12 +103,12 @@ TextureImporter:
       name: Balloon_0
       rect:
         serializedVersion: 2
-        x: 206
-        y: 521
-        width: 2159
-        height: 2680
+        x: 0
+        y: 169
+        width: 2480
+        height: 3339
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5981c2f780380bf42bdab388b01f1a61
     internalID: 0
     vertices: []
     indices: 

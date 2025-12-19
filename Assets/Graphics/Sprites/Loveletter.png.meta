@@ -1,0 +1,3081 @@
+fileFormatVersion: 2
+guid: 1f4a1384f41842c4c8f7af1fd5eda48a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -431445988344304185
+    second: Loveletter_0
+  - first:
+      213: -8208853135909659048
+    second: Loveletter_1
+  - first:
+      213: 1995962732260975755
+    second: Loveletter_2
+  - first:
+      213: -1880543076886940459
+    second: Loveletter_3
+  - first:
+      213: 6909807277935806515
+    second: Loveletter_4
+  - first:
+      213: 932839398381489520
+    second: Loveletter_5
+  - first:
+      213: -9211721166748637340
+    second: Loveletter_6
+  - first:
+      213: -7461681950061801187
+    second: Loveletter_7
+  - first:
+      213: 8580120990081210630
+    second: Loveletter_8
+  - first:
+      213: 7636426246322221843
+    second: Loveletter_9
+  - first:
+      213: 1622130442447237274
+    second: Loveletter_10
+  - first:
+      213: -5278967280646654670
+    second: Loveletter_11
+  - first:
+      213: 2198679276928421749
+    second: Loveletter_12
+  - first:
+      213: -2230343256404784212
+    second: Loveletter_13
+  - first:
+      213: -6405269489496919931
+    second: Loveletter_14
+  - first:
+      213: -1886933993843541165
+    second: Loveletter_15
+  - first:
+      213: -6578380534490531533
+    second: Loveletter_16
+  - first:
+      213: 3304076683151672808
+    second: Loveletter_17
+  - first:
+      213: 6566946537537204332
+    second: Loveletter_18
+  - first:
+      213: -6006677127211579319
+    second: Loveletter_19
+  - first:
+      213: -8965305279668477667
+    second: Loveletter_20
+  - first:
+      213: 2382882242835409047
+    second: Loveletter_21
+  - first:
+      213: -3607618941925440732
+    second: Loveletter_22
+  - first:
+      213: 6272761819692147766
+    second: Loveletter_23
+  - first:
+      213: 2002222534255312850
+    second: Loveletter_24
+  - first:
+      213: -8141378855894628468
+    second: Loveletter_25
+  - first:
+      213: -5919444503799429364
+    second: Loveletter_26
+  - first:
+      213: 8348526172058732182
+    second: Loveletter_27
+  - first:
+      213: -3096782455884869059
+    second: Loveletter_28
+  - first:
+      213: -330086238549047386
+    second: Loveletter_29
+  - first:
+      213: 6784049599602142890
+    second: Loveletter_30
+  - first:
+      213: 4953737922022495628
+    second: Loveletter_31
+  - first:
+      213: 4039812455589972429
+    second: Loveletter_32
+  - first:
+      213: -5121787930217445739
+    second: Loveletter_33
+  - first:
+      213: 3647786097286665159
+    second: Loveletter_34
+  - first:
+      213: -606149371355841007
+    second: Loveletter_35
+  - first:
+      213: 6998081278506740453
+    second: Loveletter_36
+  - first:
+      213: 2057422502302123133
+    second: Loveletter_37
+  - first:
+      213: -5360648275493444420
+    second: Loveletter_38
+  - first:
+      213: -5928162289723604363
+    second: Loveletter_39
+  - first:
+      213: -7417323879142347145
+    second: Loveletter_40
+  - first:
+      213: 8812877166230475769
+    second: Loveletter_41
+  - first:
+      213: -906150614080532820
+    second: Loveletter_42
+  - first:
+      213: 1254740165967654529
+    second: Loveletter_43
+  - first:
+      213: -6202509203891284734
+    second: Loveletter_44
+  - first:
+      213: 5234477170867366734
+    second: Loveletter_45
+  - first:
+      213: 7988731726819524974
+    second: Loveletter_46
+  - first:
+      213: 5141226318719600484
+    second: Loveletter_47
+  - first:
+      213: -1685148636714959176
+    second: Loveletter_48
+  - first:
+      213: -109294393380575889
+    second: Loveletter_49
+  - first:
+      213: -3522222298769291304
+    second: Loveletter_50
+  - first:
+      213: 8056244630749585183
+    second: Loveletter_51
+  - first:
+      213: -4280494395622067971
+    second: Loveletter_52
+  - first:
+      213: 4514128294580123488
+    second: Loveletter_53
+  - first:
+      213: 5646900558067131712
+    second: Loveletter_54
+  - first:
+      213: -5561555167309385826
+    second: Loveletter_55
+  - first:
+      213: -6097816695678821326
+    second: Loveletter_56
+  - first:
+      213: 5524032089919278053
+    second: Loveletter_57
+  - first:
+      213: 8440121317452274735
+    second: Loveletter_58
+  - first:
+      213: 6491271493778986808
+    second: Loveletter_59
+  - first:
+      213: -4601298356825526384
+    second: Loveletter_60
+  - first:
+      213: 4059547389252392900
+    second: Loveletter_61
+  - first:
+      213: 3880366957315816248
+    second: Loveletter_62
+  - first:
+      213: -3310905096429087019
+    second: Loveletter_63
+  - first:
+      213: 6849098249588906390
+    second: Loveletter_64
+  - first:
+      213: -9086890134407182755
+    second: Loveletter_65
+  - first:
+      213: 4825477527242402804
+    second: Loveletter_66
+  - first:
+      213: 7572414044731707036
+    second: Loveletter_67
+  - first:
+      213: -4105515966162427326
+    second: Loveletter_68
+  - first:
+      213: -6470445570318349011
+    second: Loveletter_69
+  - first:
+      213: 8982573663693204381
+    second: Loveletter_70
+  - first:
+      213: 1859485961424003788
+    second: Loveletter_71
+  - first:
+      213: 6493562444013744284
+    second: Loveletter_72
+  - first:
+      213: 1954547929326675930
+    second: Loveletter_73
+  - first:
+      213: 4578052732774501840
+    second: Loveletter_74
+  - first:
+      213: 2969924345541183339
+    second: Loveletter_75
+  - first:
+      213: -6088774784378135223
+    second: Loveletter_76
+  - first:
+      213: -5625819515960541177
+    second: Loveletter_77
+  - first:
+      213: -4471803459702379064
+    second: Loveletter_78
+  - first:
+      213: -6171280205648624174
+    second: Loveletter_79
+  - first:
+      213: 5025424793459125831
+    second: Loveletter_80
+  - first:
+      213: -600209135059153935
+    second: Loveletter_81
+  - first:
+      213: -2430389574425558198
+    second: Loveletter_82
+  - first:
+      213: -6156412566669839986
+    second: Loveletter_83
+  - first:
+      213: -527244098964180732
+    second: Loveletter_84
+  - first:
+      213: -8234144965719106721
+    second: Loveletter_85
+  - first:
+      213: 7934388797130744877
+    second: Loveletter_86
+  - first:
+      213: -1469901595865230843
+    second: Loveletter_87
+  - first:
+      213: 327550614028109125
+    second: Loveletter_88
+  - first:
+      213: -2039928877441775015
+    second: Loveletter_89
+  - first:
+      213: 2786595433119346908
+    second: Loveletter_90
+  - first:
+      213: -3710438377048477622
+    second: Loveletter_91
+  - first:
+      213: -5821556893476083152
+    second: Loveletter_92
+  - first:
+      213: -5699086379990948585
+    second: Loveletter_93
+  - first:
+      213: 2007106902586575886
+    second: Loveletter_94
+  - first:
+      213: -333534536948615588
+    second: Loveletter_95
+  - first:
+      213: -4453437171981751108
+    second: Loveletter_96
+  - first:
+      213: 1336965034962998357
+    second: Loveletter_97
+  - first:
+      213: -1832313059999768874
+    second: Loveletter_98
+  - first:
+      213: -1490492140578813874
+    second: Loveletter_99
+  - first:
+      213: 2892842037006521779
+    second: Loveletter_100
+  - first:
+      213: 111485097688572796
+    second: Loveletter_101
+  - first:
+      213: -1528405547889817030
+    second: Loveletter_102
+  - first:
+      213: -1230430954252858341
+    second: Loveletter_103
+  - first:
+      213: 8502548881645679816
+    second: Loveletter_104
+  - first:
+      213: 7814075491480645884
+    second: Loveletter_105
+  - first:
+      213: 3833851017306676114
+    second: Loveletter_106
+  - first:
+      213: -7418051458908225591
+    second: Loveletter_107
+  - first:
+      213: 9066624906756030553
+    second: Loveletter_108
+  - first:
+      213: 4176427323052017331
+    second: Loveletter_109
+  - first:
+      213: -5432588492647949507
+    second: Loveletter_110
+  - first:
+      213: 2261860868574594238
+    second: Loveletter_111
+  - first:
+      213: 198430847422594960
+    second: Loveletter_112
+  - first:
+      213: -1327001019797735820
+    second: Loveletter_113
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Loveletter_0
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1576
+        width: 150
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd68f4d822330af0800000000000000
+      internalID: -431445988344304185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_1
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1668
+        width: 207
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ed0c4b09b441e80800000000000000
+      internalID: -8208853135909659048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_2
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1620
+        width: 143
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b846559a78513bb10800000000000000
+      internalID: 1995962732260975755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_3
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1737
+        width: 92
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4755df808f6e5e0800000000000000
+      internalID: -1880543076886940459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_4
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1761
+        width: 106
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338c5cb0c1194ef50800000000000000
+      internalID: 6909807277935806515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_5
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1780
+        width: 215
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d840d8d7c12fc00800000000000000
+      internalID: 932839398381489520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_6
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1433
+        width: 218
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46720069764692080800000000000000
+      internalID: -9211721166748637340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_7
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 1496
+        width: 245
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d115f93dcc7c27890800000000000000
+      internalID: -7461681950061801187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_8
+      rect:
+        serializedVersion: 2
+        x: 2346
+        y: 1545
+        width: 100
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609d9afb496b21770800000000000000
+      internalID: 8580120990081210630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_9
+      rect:
+        serializedVersion: 2
+        x: 2461
+        y: 1505
+        width: 196
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313718526390af960800000000000000
+      internalID: 7636426246322221843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_10
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 1519
+        width: 192
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a903a610b07f28610800000000000000
+      internalID: 1622130442447237274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_11
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 1512
+        width: 227
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23575283a375db6b0800000000000000
+      internalID: -5278967280646654670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_12
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 1547
+        width: 210
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fc45c3727438e10800000000000000
+      internalID: 2198679276928421749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_13
+      rect:
+        serializedVersion: 2
+        x: 3386
+        y: 1733
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab0eca00aa3c01e0800000000000000
+      internalID: -2230343256404784212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_14
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1636
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58073ebf559eb17a0800000000000000
+      internalID: -6405269489496919931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_15
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1378
+        width: 186
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bb85ea78340d5e0800000000000000
+      internalID: -1886933993843541165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_16
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1414
+        width: 216
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339f854f1c5e4b4a0800000000000000
+      internalID: -6578380534490531533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_17
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 1401
+        width: 239
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e508e1dc307add20800000000000000
+      internalID: 3304076683151672808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_18
+      rect:
+        serializedVersion: 2
+        x: 3385
+        y: 1621
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60f2ec251b722b50800000000000000
+      internalID: 6566946537537204332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_19
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1158
+        width: 187
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94807104afef3aca0800000000000000
+      internalID: -6006677127211579319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_20
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1403
+        width: 60
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d112d6e2956d49380800000000000000
+      internalID: -8965305279668477667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_21
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1406
+        width: 171
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7986ac956c2b11120800000000000000
+      internalID: 2382882242835409047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_22
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1271
+        width: 223
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4234091bfa92fedc0800000000000000
+      internalID: -3607618941925440732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_23
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1349
+        width: 256
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6342267f3a35d0750800000000000000
+      internalID: 6272761819692147766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_24
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1085
+        width: 158
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dff19369c259cb10800000000000000
+      internalID: 2002222534255312850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_25
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 1112
+        width: 99
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c874680c013040f80800000000000000
+      internalID: -8141378855894628468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_26
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 1122
+        width: 136
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07856b1698e9dda0800000000000000
+      internalID: -5919444503799429364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_27
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 987
+        width: 155
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696cc93325cebd370800000000000000
+      internalID: 8348526172058732182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_28
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 1024
+        width: 45
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32125a83c40605d0800000000000000
+      internalID: -3096782455884869059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_29
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 990
+        width: 80
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a70a0e905c4b6bf0800000000000000
+      internalID: -330086238549047386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_30
+      rect:
+        serializedVersion: 2
+        x: 2101
+        y: 846
+        width: 106
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaeaaeada29c52e50800000000000000
+      internalID: 6784049599602142890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_31
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 985
+        width: 162
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c855880e4663fb440800000000000000
+      internalID: 4953737922022495628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_32
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1153
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc983a6460c401830800000000000000
+      internalID: 4039812455589972429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_33
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 1022
+        width: 135
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596818c8301cbe8b0800000000000000
+      internalID: -5121787930217445739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_34
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 804
+        width: 202
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c35161f02a8f9230800000000000000
+      internalID: 3647786097286665159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_35
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 999
+        width: 120
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e3287bb568697f0800000000000000
+      internalID: -606149371355841007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_36
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 1100
+        width: 137
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eaa4ba68dd2e1160800000000000000
+      internalID: 6998081278506740453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_37
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 1088
+        width: 80
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d740d9a7dde6d8c10800000000000000
+      internalID: 2057422502302123133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_38
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 1050
+        width: 96
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4276d9bc62b95b0800000000000000
+      internalID: -5360648275493444420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_39
+      rect:
+        serializedVersion: 2
+        x: 3698
+        y: 1059
+        width: 83
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57288266ecfeabda0800000000000000
+      internalID: -5928162289723604363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_40
+      rect:
+        serializedVersion: 2
+        x: 3801
+        y: 1029
+        width: 38
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ea2b70b3f501990800000000000000
+      internalID: -7417323879142347145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_41
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 1028
+        width: 147
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3915e0711ad4a70800000000000000
+      internalID: 8812877166230475769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_42
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 877
+        width: 168
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae4ab641d4bc63f0800000000000000
+      internalID: -906150614080532820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_43
+      rect:
+        serializedVersion: 2
+        x: 4419
+        y: 934
+        width: 207
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18eaae5788bb96110800000000000000
+      internalID: 1254740165967654529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_44
+      rect:
+        serializedVersion: 2
+        x: 4729
+        y: 1156
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20518f9cdb24ce9a0800000000000000
+      internalID: -6202509203891284734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_45
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 1009
+        width: 88
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4be072e04994a840800000000000000
+      internalID: 5234477170867366734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_46
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 1036
+        width: 45
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6188feed2dadde60800000000000000
+      internalID: 7988731726819524974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_47
+      rect:
+        serializedVersion: 2
+        x: 4277
+        y: 942
+        width: 105
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467cb25f81e495740800000000000000
+      internalID: 5141226318719600484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_48
+      rect:
+        serializedVersion: 2
+        x: 4641
+        y: 1017
+        width: 63
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8befed24e362d98e0800000000000000
+      internalID: -1685148636714959176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_49
+      rect:
+        serializedVersion: 2
+        x: 4745
+        y: 1035
+        width: 36
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65eb9a0455bb7ef0800000000000000
+      internalID: -109294393380575889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_50
+      rect:
+        serializedVersion: 2
+        x: 4805
+        y: 1018
+        width: 169
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d785e51b7d8e1fc0800000000000000
+      internalID: -3522222298769291304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_51
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 747
+        width: 137
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f1a7fcec78dcf60800000000000000
+      internalID: 8056244630749585183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_52
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 760
+        width: 71
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df075e5b601a894c0800000000000000
+      internalID: -4280494395622067971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_53
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 681
+        width: 79
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067fcfc54c765ae30800000000000000
+      internalID: 4514128294580123488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_54
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 776
+        width: 58
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045eb859322dd5e40800000000000000
+      internalID: 5646900558067131712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_55
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 801
+        width: 86
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f29cdaa0361d2b0800000000000000
+      internalID: -5561555167309385826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_56
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 837
+        width: 159
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c1e9cd504306ba0800000000000000
+      internalID: -6097816695678821326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_57
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 669
+        width: 150
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb4f7f0bed49ac40800000000000000
+      internalID: 5524032089919278053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_58
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 667
+        width: 114
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2cd1fbde95512570800000000000000
+      internalID: 8440121317452274735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_59
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 647
+        width: 160
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837d0570801a51a50800000000000000
+      internalID: 6491271493778986808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_60
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 704
+        width: 111
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f63dfe587e420c0800000000000000
+      internalID: -4601298356825526384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_61
+      rect:
+        serializedVersion: 2
+        x: 4097
+        y: 671
+        width: 31
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7d04597d8665830800000000000000
+      internalID: 4059547389252392900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_62
+      rect:
+        serializedVersion: 2
+        x: 4139
+        y: 653
+        width: 177
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bf8f84035d9d530800000000000000
+      internalID: 3880366957315816248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_63
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 693
+        width: 98
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d650525b5d4d02d0800000000000000
+      internalID: -3310905096429087019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_64
+      rect:
+        serializedVersion: 2
+        x: 4501
+        y: 802
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6991f76e192ec0f50800000000000000
+      internalID: 6849098249588906390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_65
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 627
+        width: 82
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5688a13191e4e180800000000000000
+      internalID: -9086890134407182755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_66
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 528
+        width: 156
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbe9ea9e3a87f240800000000000000
+      internalID: 4825477527242402804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_67
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 546
+        width: 137
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e896c047e961960800000000000000
+      internalID: 7572414044731707036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_68
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 456
+        width: 116
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242a1311bf64607c0800000000000000
+      internalID: -4105515966162427326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_69
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 511
+        width: 110
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2dcca2290c5436a0800000000000000
+      internalID: -6470445570318349011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_70
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 699
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b6639c72388ac70800000000000000
+      internalID: 8982573663693204381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_71
+      rect:
+        serializedVersion: 2
+        x: 4001
+        y: 710
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2e08341a83ec910800000000000000
+      internalID: 1859485961424003788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_72
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 664
+        width: 63
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90b14273a4cd1a50800000000000000
+      internalID: 6493562444013744284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_73
+      rect:
+        serializedVersion: 2
+        x: 4394
+        y: 648
+        width: 141
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7edff6cf2ff1b10800000000000000
+      internalID: 1954547929326675930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_74
+      rect:
+        serializedVersion: 2
+        x: 4541
+        y: 662
+        width: 36
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddc70474b2888f30800000000000000
+      internalID: 4578052732774501840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_75
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 521
+        width: 89
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6744c9f47a473920800000000000000
+      internalID: 2969924345541183339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_76
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 411
+        width: 95
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d19c3e793508ba0800000000000000
+      internalID: -6088774784378135223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_77
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 659
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70046b405f21de1b0800000000000000
+      internalID: -5625819515960541177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_78
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 550
+        width: 165
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cda31f2276f0f1c0800000000000000
+      internalID: -4471803459702379064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_79
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 395
+        width: 192
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d50aec89553b5aa0800000000000000
+      internalID: -6171280205648624174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_80
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 427
+        width: 111
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e629b4935edb540800000000000000
+      internalID: 5025424793459125831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_81
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 589
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbcad1c8f0aba7f0800000000000000
+      internalID: -600209135059153935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_82
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 481
+        width: 113
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a434d8e0f85854ed0800000000000000
+      internalID: -2430389574425558198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_83
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 514
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81b4e08367009aa0800000000000000
+      internalID: -6156412566669839986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_84
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 548
+        width: 44
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401b153194adea8f0800000000000000
+      internalID: -527244098964180732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_85
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 540
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bdd31b7c07abd80800000000000000
+      internalID: -8234144965719106721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_86
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 424
+        width: 119
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2421d2a29c9c1e60800000000000000
+      internalID: 7934388797130744877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_87
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 437
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5025ca3594cd99be0800000000000000
+      internalID: -1469901595865230843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_88
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 438
+        width: 35
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5454b1b4c81bb8400800000000000000
+      internalID: 327550614028109125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_89
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 428
+        width: 46
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a85057e77b0b3e0800000000000000
+      internalID: -2039928877441775015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_90
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 284
+        width: 218
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0fdcb48c9fba620800000000000000
+      internalID: 2786595433119346908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_91
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 187
+        width: 247
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a407c0f64ffd18cc0800000000000000
+      internalID: -3710438377048477622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_92
+      rect:
+        serializedVersion: 2
+        x: 3662
+        y: 290
+        width: 137
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03aa1ac69dca53fa0800000000000000
+      internalID: -5821556893476083152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_93
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 294
+        width: 213
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7156f58e127c8e0b0800000000000000
+      internalID: -5699086379990948585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_94
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 256
+        width: 369
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c48e2081daadb10800000000000000
+      internalID: 2007106902586575886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_95
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 102
+        width: 91
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c567ad41b1c0f5bf0800000000000000
+      internalID: -333534536948615588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_96
+      rect:
+        serializedVersion: 2
+        x: 2910
+        y: 212
+        width: 105
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbce186cc763232c0800000000000000
+      internalID: -4453437171981751108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_97
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 220
+        width: 76
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5545612ad9add8210800000000000000
+      internalID: 1336965034962998357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_98
+      rect:
+        serializedVersion: 2
+        x: 3122
+        y: 244
+        width: 83
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de976ddaf05296e0800000000000000
+      internalID: -1832313059999768874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_99
+      rect:
+        serializedVersion: 2
+        x: 3395
+        y: 235
+        width: 108
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48c94c8b45b05be0800000000000000
+      internalID: -1490492140578813874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_100
+      rect:
+        serializedVersion: 2
+        x: 3523
+        y: 239
+        width: 56
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b557177180752820800000000000000
+      internalID: 2892842037006521779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_101
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 354
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c732a7d0b131c8100800000000000000
+      internalID: 111485097688572796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_102
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 159
+        width: 96
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a8a4580430acae0800000000000000
+      internalID: -1528405547889817030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_103
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 175
+        width: 53
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c0d13f091aceee0800000000000000
+      internalID: -1230430954252858341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_104
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 291
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4b2efc82f1ff570800000000000000
+      internalID: 8502548881645679816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_105
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 184
+        width: 90
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf03acd324c217c60800000000000000
+      internalID: 7814075491480645884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_106
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 125
+        width: 131
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b95580033943530800000000000000
+      internalID: 3833851017306676114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_107
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 136
+        width: 99
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cff43a2089cd0990800000000000000
+      internalID: -7418051458908225591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_108
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 119
+        width: 113
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95007eec05f13dd70800000000000000
+      internalID: 9066624906756030553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_109
+      rect:
+        serializedVersion: 2
+        x: 3617
+        y: 272
+        width: 52
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b640ccc586a5f930800000000000000
+      internalID: 4176427323052017331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_110
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 138
+        width: 96
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b18dc8c819b94b0800000000000000
+      internalID: -5432588492647949507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_111
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 163
+        width: 38
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4ceb2e97eb36f10800000000000000
+      internalID: 2261860868574594238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_112
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 107
+        width: 84
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f7a1dedc7f0c200800000000000000
+      internalID: 198430847422594960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loveletter_113
+      rect:
+        serializedVersion: 2
+        x: 2654
+        y: 48
+        width: 99
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476ff5e6a9b859de0800000000000000
+      internalID: -1327001019797735820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Loveletter_0: -431445988344304185
+      Loveletter_1: -8208853135909659048
+      Loveletter_10: 1622130442447237274
+      Loveletter_100: 2892842037006521779
+      Loveletter_101: 111485097688572796
+      Loveletter_102: -1528405547889817030
+      Loveletter_103: -1230430954252858341
+      Loveletter_104: 8502548881645679816
+      Loveletter_105: 7814075491480645884
+      Loveletter_106: 3833851017306676114
+      Loveletter_107: -7418051458908225591
+      Loveletter_108: 9066624906756030553
+      Loveletter_109: 4176427323052017331
+      Loveletter_11: -5278967280646654670
+      Loveletter_110: -5432588492647949507
+      Loveletter_111: 2261860868574594238
+      Loveletter_112: 198430847422594960
+      Loveletter_113: -1327001019797735820
+      Loveletter_12: 2198679276928421749
+      Loveletter_13: -2230343256404784212
+      Loveletter_14: -6405269489496919931
+      Loveletter_15: -1886933993843541165
+      Loveletter_16: -6578380534490531533
+      Loveletter_17: 3304076683151672808
+      Loveletter_18: 6566946537537204332
+      Loveletter_19: -6006677127211579319
+      Loveletter_2: 1995962732260975755
+      Loveletter_20: -8965305279668477667
+      Loveletter_21: 2382882242835409047
+      Loveletter_22: -3607618941925440732
+      Loveletter_23: 6272761819692147766
+      Loveletter_24: 2002222534255312850
+      Loveletter_25: -8141378855894628468
+      Loveletter_26: -5919444503799429364
+      Loveletter_27: 8348526172058732182
+      Loveletter_28: -3096782455884869059
+      Loveletter_29: -330086238549047386
+      Loveletter_3: -1880543076886940459
+      Loveletter_30: 6784049599602142890
+      Loveletter_31: 4953737922022495628
+      Loveletter_32: 4039812455589972429
+      Loveletter_33: -5121787930217445739
+      Loveletter_34: 3647786097286665159
+      Loveletter_35: -606149371355841007
+      Loveletter_36: 6998081278506740453
+      Loveletter_37: 2057422502302123133
+      Loveletter_38: -5360648275493444420
+      Loveletter_39: -5928162289723604363
+      Loveletter_4: 6909807277935806515
+      Loveletter_40: -7417323879142347145
+      Loveletter_41: 8812877166230475769
+      Loveletter_42: -906150614080532820
+      Loveletter_43: 1254740165967654529
+      Loveletter_44: -6202509203891284734
+      Loveletter_45: 5234477170867366734
+      Loveletter_46: 7988731726819524974
+      Loveletter_47: 5141226318719600484
+      Loveletter_48: -1685148636714959176
+      Loveletter_49: -109294393380575889
+      Loveletter_5: 932839398381489520
+      Loveletter_50: -3522222298769291304
+      Loveletter_51: 8056244630749585183
+      Loveletter_52: -4280494395622067971
+      Loveletter_53: 4514128294580123488
+      Loveletter_54: 5646900558067131712
+      Loveletter_55: -5561555167309385826
+      Loveletter_56: -6097816695678821326
+      Loveletter_57: 5524032089919278053
+      Loveletter_58: 8440121317452274735
+      Loveletter_59: 6491271493778986808
+      Loveletter_6: -9211721166748637340
+      Loveletter_60: -4601298356825526384
+      Loveletter_61: 4059547389252392900
+      Loveletter_62: 3880366957315816248
+      Loveletter_63: -3310905096429087019
+      Loveletter_64: 6849098249588906390
+      Loveletter_65: -9086890134407182755
+      Loveletter_66: 4825477527242402804
+      Loveletter_67: 7572414044731707036
+      Loveletter_68: -4105515966162427326
+      Loveletter_69: -6470445570318349011
+      Loveletter_7: -7461681950061801187
+      Loveletter_70: 8982573663693204381
+      Loveletter_71: 1859485961424003788
+      Loveletter_72: 6493562444013744284
+      Loveletter_73: 1954547929326675930
+      Loveletter_74: 4578052732774501840
+      Loveletter_75: 2969924345541183339
+      Loveletter_76: -6088774784378135223
+      Loveletter_77: -5625819515960541177
+      Loveletter_78: -4471803459702379064
+      Loveletter_79: -6171280205648624174
+      Loveletter_8: 8580120990081210630
+      Loveletter_80: 5025424793459125831
+      Loveletter_81: -600209135059153935
+      Loveletter_82: -2430389574425558198
+      Loveletter_83: -6156412566669839986
+      Loveletter_84: -527244098964180732
+      Loveletter_85: -8234144965719106721
+      Loveletter_86: 7934388797130744877
+      Loveletter_87: -1469901595865230843
+      Loveletter_88: 327550614028109125
+      Loveletter_89: -2039928877441775015
+      Loveletter_9: 7636426246322221843
+      Loveletter_90: 2786595433119346908
+      Loveletter_91: -3710438377048477622
+      Loveletter_92: -5821556893476083152
+      Loveletter_93: -5699086379990948585
+      Loveletter_94: 2007106902586575886
+      Loveletter_95: -333534536948615588
+      Loveletter_96: -4453437171981751108
+      Loveletter_97: 1336965034962998357
+      Loveletter_98: -1832313059999768874
+      Loveletter_99: -1490492140578813874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

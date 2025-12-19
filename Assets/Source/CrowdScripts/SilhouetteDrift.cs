@@ -14,7 +14,6 @@ internal class SilhouetteDrift : MonoBehaviour {
 
     void OnEnable() {
         basePos = transform.position;
-        // per-instance random phases so they don't sync
         phaseX = Random.value * Mathf.PI * 2f;
         phaseY = Random.value * Mathf.PI * 2f;
     }

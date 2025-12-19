@@ -9,13 +9,13 @@ public class CrowdTintOnLose : MonoBehaviour
     [SerializeField] private Transform crowdRoot;
 
     [Header("Wave settings")]
-    [Tooltip("Centre point of the wave in world space (e.g., centre of cake). Leave empty to use this object's position.")]
+    [Tooltip("Centre point of the wave in world space")]
     [SerializeField] private Transform waveCenter;
-    [Tooltip("How fast the wave travels across the screen (world units per second).")]
+    [Tooltip("How fast the wave travels across the screen.")]
     [SerializeField] private float spreadSpeed = 4f;
     [Tooltip("How long each sprite takes to fade once the wave reaches it.")]
     [SerializeField] private float fadeDuration = 0.6f;
-    [Tooltip("Extra delay before the wave starts (optional).")]
+    [Tooltip("Extra delay before the wave starts.")]
     [SerializeField] private float startDelay = 0.0f;
 
     [Header("Colours")]
@@ -83,13 +83,13 @@ public class CrowdTintOnLose : MonoBehaviour
     {
         if (startDelay > 0f) yield return new WaitForSeconds(startDelay);
 
-        // Start a fade coroutine per sprite with distance-based delay
+        
         foreach (var e in entries)
         {
             float delay = (spreadSpeed <= 0f) ? 0f : (e.distance / spreadSpeed);
             StartCoroutine(CoFadeOne(e.sr, e.original, charcoal, delay, fadeDuration));
         }
-        // done – we don’t need to wait for all, but we can:
+        
         yield return null;
     }
 
@@ -107,7 +107,7 @@ public class CrowdTintOnLose : MonoBehaviour
         if (sr) sr.color = to;
     }
 
-    // Called from GameController when going back to Idle
+    
     public void ResetToOriginal()
     {
         if (!prepared) return;

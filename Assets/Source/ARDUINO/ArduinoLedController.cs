@@ -16,8 +16,8 @@ public class ArduinoLedController : MonoBehaviour {
 
     [Header("Debug")]
     [SerializeField] private bool enableDebugKeys = true;
-    [SerializeField] private bool pingOnConnect = false;   // keep OFF for Leonardo stability
-    [SerializeField] private int  postOpenDelayMs = 1200;  // Leonardo needs a longer wait after DTR
+    [SerializeField] private bool pingOnConnect = false;   
+    [SerializeField] private int  postOpenDelayMs = 1200; 
 
     private SerialPort port;
     private bool connected;
@@ -34,14 +34,13 @@ public class ArduinoLedController : MonoBehaviour {
     }
 
     private IEnumerator OpenOnce() {
-        yield return null; // let one frame pass
+        yield return null; 
 
         SafeClose();
         try {
-            // Create then configure (safer across Unity/C# versions)
             var sp = new SerialPort(preferredPort, baud);
             sp.NewLine      = "\n";
-            sp.DtrEnable    = true;   // toggles reset on Leonardo
+            sp.DtrEnable    = true;   
             sp.RtsEnable    = false;
             sp.ReadTimeout  = 1000;
             sp.WriteTimeout = 300;
@@ -49,7 +48,6 @@ public class ArduinoLedController : MonoBehaviour {
             sp.Open();
             port = sp;
 
-            // Leonardo re-enumerates after DTR: wait a bit longer
             float t0 = Time.realtimeSinceStartup;
             while (Time.realtimeSinceStartup - t0 < (postOpenDelayMs / 1000f)) { /* busy wait */ }
 
@@ -98,15 +96,13 @@ public class ArduinoLedController : MonoBehaviour {
         }
         catch (Exception)
         {
-            SafeClose(); // drop connection if write failed
+            SafeClose(); 
         }
     }
     
-        public void LedFlicker(int idx) => Send(idx, 'F'); // “ignite” (flicker)
-    public void LedOn(int idx)      => Send(idx, 'N'); // steady on
-    public void LedOff(int idx)     => Send(idx, 'O'); // off
-
-    // ------------ Debug keys (hold Shift/Ctrl, then tap number) ------------
+    public void LedFlicker(int idx) => Send(idx, 'F'); 
+    public void LedOn(int idx)      => Send(idx, 'N'); 
+    public void LedOff(int idx)     => Send(idx, 'O'); 
     private void Update() {
     if (!enableDebugKeys) return;
 
@@ -140,7 +136,6 @@ public class ArduinoLedController : MonoBehaviour {
     if (kb.leftCtrlKey .isPressed && kb.digit5Key.wasPressedThisFrame) Send(5, 'O');
 
 #else
-    // Legacy Input Manager (works if Active Input Handling = Both or Old)
     if (Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'F');
     if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'N');
     if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Alpha1)) Send(1, 'O');

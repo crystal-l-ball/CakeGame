@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// Put this on the parent that holds your 12 "guy" sprites.
-/// Place/scale all guys in the Scene, disable them, and this reveals them one-by-one.
+
 internal class RevealGuysInOrder : MonoBehaviour {
     [Header("Targets")]
     [SerializeField] private bool autoCollectChildren = true;
@@ -21,7 +20,7 @@ internal class RevealGuysInOrder : MonoBehaviour {
     [SerializeField] private bool fadeIn = true;
     [SerializeField] private float fadeDuration = 0.4f;
 
-    // NEW — Drift settings
+  
     [Header("Drift (dance)")]
     [SerializeField] private bool enableDrift = true;
     [SerializeField] private Vector2 swayXAmplitudeRange = new Vector2(0.06f, 0.16f);
@@ -83,10 +82,8 @@ internal class RevealGuysInOrder : MonoBehaviour {
         foreach (var go in order) {
             if (go == null) continue;
 
-            // Activate
             go.SetActive(true);
 
-            // NEW — add/configure drift per guy at activation
             if (enableDrift) {
                 var drift = go.GetComponent<SilhouetteDrift>();
                 if (!drift) drift = go.AddComponent<SilhouetteDrift>();
@@ -94,7 +91,6 @@ internal class RevealGuysInOrder : MonoBehaviour {
                 drift.swayXFrequency = Random.Range(swayXFrequencyRange.x, swayXFrequencyRange.y);
                 drift.swayYAmplitude = Random.Range(swayYAmplitudeRange.x, swayYAmplitudeRange.y);
                 drift.swayYFrequency = Random.Range(swayYFrequencyRange.x, swayYFrequencyRange.y);
-                // OnEnable() in SilhouetteDrift captures the current position as its base point
             }
 
             if (fadeIn) {
@@ -105,7 +101,6 @@ internal class RevealGuysInOrder : MonoBehaviour {
         }
     }
 
-    // --- Helpers ---
     void SetAlpha(GameObject go, float a) {
         var renderers = go.GetComponentsInChildren<SpriteRenderer>(true);
         foreach (var r in renderers) {

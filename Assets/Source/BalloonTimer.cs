@@ -3,30 +3,30 @@ using UnityEngine;
 public class BalloonTimer : MonoBehaviour {
     [Header("Sprite")]
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private int sortingOrder = 200;      // keep above scene
+    [SerializeField] private int sortingOrder = 200;      
 
     [Header("Screen padding (world units)")]
     [SerializeField] private float padX = 0.5f;
     [SerializeField] private float padY = 0.5f;
 
     [Header("Motion")]
-    [SerializeField] private float swayAmplitude = 0.6f;  // left-right wiggle
-    [SerializeField] private float swayFrequency = 0.25f; // cycles/sec
+    [SerializeField] private float swayAmplitude = 0.6f;  
+    [SerializeField] private float swayFrequency = 0.25f; 
     [SerializeField]
-    private AnimationCurve riseCurve =   // vertical ease
+    private AnimationCurve riseCurve =   
         AnimationCurve.Linear(0, 0, 1, 1);
         
         [Header("Horizontal placement")]
-[SerializeField, Range(0f, 1f)] private float xFromLeft01 = 0.85f; // try 0.85–0.92 for near-right
+[SerializeField, Range(0f, 1f)] private float xFromLeft01 = 0.85f; 
 
 
-    float duration;     // total seconds to reach the top
+    float duration;     
     float startTime;
     bool  running;
 
     Vector3 startPos;
     Vector3 endPos;
-    float phase;        // random phase so sway doesn't always start at same point
+    float phase;        
 
     void Reset() {
         sr = GetComponent<SpriteRenderer>();
@@ -36,11 +36,10 @@ public class BalloonTimer : MonoBehaviour {
         if (!sr) sr = GetComponent<SpriteRenderer>();
         if (!sr) sr = gameObject.AddComponent<SpriteRenderer>();
         sr.sortingOrder = sortingOrder;
-        sr.color = new Color(1,1,1,0); // start invisible
+        sr.color = new Color(1,1,1,0); 
     }
 
     void OnEnable() {
-        // stop when the round ends
         if (GameController.Instance != null)
             GameController.Instance.OnGameOver += HandleGameOver;
     }
@@ -54,7 +53,6 @@ public class BalloonTimer : MonoBehaviour {
         running = false;
     }
 
-    /// Call from GameController when entering Idle
     public void ResetBalloon() {
         running = false;
         if (!Camera.main) return;
@@ -64,7 +62,6 @@ public class BalloonTimer : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    /// Call from GameController when the round starts
     public void Begin(float totalSeconds) {
         if (!Camera.main) return;
         duration  = Mathf.Max(0.1f, totalSeconds);
@@ -83,16 +80,14 @@ public class BalloonTimer : MonoBehaviour {
         float t = Mathf.Clamp01((Time.time - startTime) / duration);
         float p = riseCurve.Evaluate(t);
 
-        // vertical rise (bottom -> top)
         Vector3 pos = Vector3.Lerp(startPos, endPos, p);
 
-        // horizontal zig-zag around the start X
         float targetX = startPos.x + Mathf.Sin((Time.time * swayFrequency * 2f * Mathf.PI) + phase) * swayAmplitude;
         pos.x = Mathf.Lerp(pos.x, targetX, 0.75f);
 
         transform.position = pos;
 
-        if (t >= 1f) running = false; // we reached the top; GameController handles Win
+        if (t >= 1f) running = false; 
     }
 
     void ComputeStartEnd(Camera cam, out Vector3 bottom, out Vector3 top) {
@@ -111,7 +106,6 @@ public class BalloonTimer : MonoBehaviour {
             top    = new Vector3(x, maxY, 0f);
 
         } else {
-            // perspective fallback via viewport
             float z = Mathf.Abs(cam.transform.position.z);
 
             Vector3 leftW  = cam.ViewportToWorldPoint(new Vector3(0f, 0.5f, z));
@@ -126,12 +120,10 @@ public class BalloonTimer : MonoBehaviour {
             bottom.z = top.z = 0f;
             bottom.y += padY; top.y -= padY;
 
-            // apply our chosen X
             bottom.x = x;
             top.x    = x;
 
 
-            // clamp X to padded width
             float left  = cam.ViewportToWorldPoint(new Vector3(0f, 0.5f, z)).x + padX;
             float right = cam.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x - padX;
             bottom.x = top.x = Mathf.Lerp(left, right, 0.5f);

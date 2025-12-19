@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: a5c9c1b419d604d4289476682c40f166
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3723662315423222684
+    second: nosprinkles_0
+  - first:
+      213: 4475801395456097524
+    second: nosprinkles_1
+  - first:
+      213: 8763585752524356794
+    second: nosprinkles_2
+  - first:
+      213: 5773731884603416208
+    second: nosprinkles_3
+  - first:
+      213: -1612054629382215739
+    second: nosprinkles_4
+  - first:
+      213: -2981784328985980616
+    second: nosprinkles_5
+  - first:
+      213: 6015210496175995660
+    second: nosprinkles_6
+  - first:
+      213: -8755615607422191142
+    second: nosprinkles_7
+  - first:
+      213: -7564479823250685777
+    second: nosprinkles_8
+  - first:
+      213: 1565704287707307751
+    second: nosprinkles_9
+  - first:
+      213: -4803147722459460869
+    second: nosprinkles_10
+  - first:
+      213: -4402300574460028963
+    second: nosprinkles_11
+  - first:
+      213: -7178045410044102844
+    second: nosprinkles_12
+  - first:
+      213: 1411890164533777163
+    second: nosprinkles_13
+  - first:
+      213: -2627442671583610695
+    second: nosprinkles_14
+  - first:
+      213: -930549893104976645
+    second: nosprinkles_15
+  - first:
+      213: 4997394394210874942
+    second: nosprinkles_16
+  - first:
+      213: -2482539966889434936
+    second: nosprinkles_17
+  - first:
+      213: 9180195819981542282
+    second: nosprinkles_18
+  - first:
+      213: -3736175133376401882
+    second: nosprinkles_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nosprinkles_0
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1084
+        width: 342
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b4f46a52b1da330800000000000000
+      internalID: 3723662315423222684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_1
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1067
+        width: 283
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fcbb55c7ad3d1e30800000000000000
+      internalID: 4475801395456097524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_2
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 1108
+        width: 330
+        height: 763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc73e97fc28e9970800000000000000
+      internalID: 8763585752524356794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1051
+        width: 266
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e122afe8a602050800000000000000
+      internalID: 5773731884603416208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_4
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 1124
+        width: 390
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c726290bd4d0a9e0800000000000000
+      internalID: -1612054629382215739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_5
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 1177
+        width: 142
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831d6f173f29e96d0800000000000000
+      internalID: -2981784328985980616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_6
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 1170
+        width: 291
+        height: 629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b75c983125a7350800000000000000
+      internalID: 6015210496175995660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_7
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 1245
+        width: 102
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9fbb98efdcd7680800000000000000
+      internalID: -8755615607422191142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_8
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 1140
+        width: 275
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa08888dda1950790800000000000000
+      internalID: -7564479823250685777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_9
+      rect:
+        serializedVersion: 2
+        x: 3495
+        y: 1177
+        width: 283
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee991411cf7ab510800000000000000
+      internalID: 1565704287707307751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_10
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 1227
+        width: 316
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfac317389ac75db0800000000000000
+      internalID: -4803147722459460869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_11
+      rect:
+        serializedVersion: 2
+        x: 4187
+        y: 1074
+        width: 278
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7dfc0b3f2e7e2c0800000000000000
+      internalID: -4402300574460028963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_12
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 165
+        width: 512
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447b2b00bb5726c90800000000000000
+      internalID: -7178045410044102844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_13
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 278
+        width: 323
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0357e6cf9a089310800000000000000
+      internalID: 1411890164533777163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_14
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 271
+        width: 556
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b83e8c9fc2798bd0800000000000000
+      internalID: -2627442671583610695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_15
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 324
+        width: 388
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc33bf6dc50613f0800000000000000
+      internalID: -930549893104976645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_16
+      rect:
+        serializedVersion: 2
+        x: 3457
+        y: 561
+        width: 165
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36b77569bf4a5540800000000000000
+      internalID: 4997394394210874942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_17
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 414
+        width: 222
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c068dc9d0f3c8dd0800000000000000
+      internalID: -2482539966889434936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 276
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a839682a57b966f70800000000000000
+      internalID: 9180195819981542282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosprinkles_19
+      rect:
+        serializedVersion: 2
+        x: 3835
+        y: 273
+        width: 159
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ea374e280762cc0800000000000000
+      internalID: -3736175133376401882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nosprinkles_0: 3723662315423222684
+      nosprinkles_1: 4475801395456097524
+      nosprinkles_10: -4803147722459460869
+      nosprinkles_11: -4402300574460028963
+      nosprinkles_12: -7178045410044102844
+      nosprinkles_13: 1411890164533777163
+      nosprinkles_14: -2627442671583610695
+      nosprinkles_15: -930549893104976645
+      nosprinkles_16: 4997394394210874942
+      nosprinkles_17: -2482539966889434936
+      nosprinkles_18: 9180195819981542282
+      nosprinkles_19: -3736175133376401882
+      nosprinkles_2: 8763585752524356794
+      nosprinkles_3: 5773731884603416208
+      nosprinkles_4: -1612054629382215739
+      nosprinkles_5: -2981784328985980616
+      nosprinkles_6: 6015210496175995660
+      nosprinkles_7: -8755615607422191142
+      nosprinkles_8: -7564479823250685777
+      nosprinkles_9: 1565704287707307751
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

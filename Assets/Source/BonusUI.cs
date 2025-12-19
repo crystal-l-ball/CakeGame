@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 
 //
-// If you already defined this enum in another file, delete this block.
+// This UI should show up when you achieve bonuses. Not working so lekker at the moment.
 //
 public enum BonusType { PerfectBlow, CloseSave, TallBoy, Bestie }
 
@@ -12,8 +12,8 @@ public class BonusUI : MonoBehaviour {
     public static BonusUI Instance { get; private set; }
 
     [Header("Pop Text (spawn TMP text near candles)")]
-    [SerializeField] private RectTransform popTextParent;       // full-screen rect under your UI_Bonus canvas
-    [SerializeField] private TextMeshProUGUI popTextPrefab;     // prefab with TMP text + (optionally) CanvasGroup
+    [SerializeField] private RectTransform popTextParent;       
+    [SerializeField] private TextMeshProUGUI popTextPrefab;     
 
     [Tooltip("How long a small/normal pop lasts (seconds).")]
     [SerializeField] private float popTime = 0.9f;
@@ -25,8 +25,8 @@ public class BonusUI : MonoBehaviour {
     [SerializeField] private float driftUp = 60f;
 
     [Header("Stacked Bonus Icons (optional, can be unused)")]
-    [SerializeField] private Transform iconBar;         // e.g., a HorizontalLayoutGroup
-    [SerializeField] private Image iconPrefab;          // small Image prefab (64x64 etc.)
+    [SerializeField] private Transform iconBar;        
+    [SerializeField] private Image iconPrefab;          
 
     [Header("Sprites per bonus type")]
     [SerializeField] private Sprite perfectIcon;
@@ -35,7 +35,7 @@ public class BonusUI : MonoBehaviour {
     [SerializeField] private Sprite bestieIcon;
 
     [Header("Flash-in-place (bottom-left)")]
-    [SerializeField] private RectTransform flashAnchor;     // ← assign BonusFlashAnchor
+    [SerializeField] private RectTransform flashAnchor;     
     [SerializeField] private Vector2 flashSize = new Vector2(160, 67);
     [SerializeField] private float flashDuration = 1.1f;
     [SerializeField] private float flashFadeIn = 0.18f;
@@ -43,37 +43,37 @@ public class BonusUI : MonoBehaviour {
     [SerializeField] private float flashStartScale = 0.8f;
     [SerializeField] private float flashPopScale = 1.15f;
 
-    [SerializeField] private float bottomY = 60f; // tweak in Inspector
+    [SerializeField] private float bottomY = 60f; 
     
     [Header("Bonus Text (bottom-left pop)")]
-[SerializeField] private float bonusMarginX = 40f;   // pixels from left
-[SerializeField] private float bonusMarginY = 40f;   // pixels from bottom
+[SerializeField] private float bonusMarginX = 40f;   // number of pixels from the left
+[SerializeField] private float bonusMarginY = 40f;   // number of pixels from the bottom
 [SerializeField] private bool  bonusBigByDefault = true;
 
 
     private Canvas rootCanvas;
 
-    /// Call when entering Win to keep the latest Sprinkles popup on screen.
+    /// All sprinkles are supposed to be visible on screen when the winning confetti comes up. But not when you lose!!
 
     public void PopBonusBottomLeft(string text, bool? bigOverride = null, Color? colorOverride = null)
 {
     if (popTextParent == null || popTextPrefab == null) return;
 
-    // Instantiate TMP object
-    var tmp  = Instantiate(popTextPrefab, popTextParent); // TextMeshProUGUI
+    
+    var tmp  = Instantiate(popTextPrefab, popTextParent); 
     var go   = tmp.gameObject;
     var rect = tmp.rectTransform;
 
-    // Ensure CanvasGroup exists for fading
+   
     var cg = go.GetComponent<CanvasGroup>();
     if (cg == null) cg = go.AddComponent<CanvasGroup>();
 
-    // Anchor to bottom-left
+    
     rect.anchorMin = rect.anchorMax = new Vector2(0f, 0f);
     rect.pivot     = new Vector2(0f, 0f);
     rect.anchoredPosition = new Vector2(bonusMarginX, bonusMarginY);
 
-    // Set text and initial state
+   
     tmp.text = text;
     if (colorOverride.HasValue) tmp.color = colorOverride.Value;
 
@@ -83,7 +83,7 @@ public class BonusUI : MonoBehaviour {
     rect.localScale = Vector3.one * baseScale;
     cg.alpha = 0f;
 
-    // Animate & auto-destroy (reuses the same animation style)
+    
     StartCoroutine(FadeAndPop(tmp, cg, baseScale));
 }
 
@@ -92,17 +92,17 @@ public class BonusUI : MonoBehaviour {
     {
         keepLast = true;
 
-        // If the last popup is mid-animation, stop its coroutine and make it fully visible
+        
         if (lastRoutine != null)
         {
             StopCoroutine(lastRoutine);
             lastRoutine = null;
         }
         if (lastCg != null) lastCg.alpha = 1f;
-        if (lastPop != null) lastPop.rectTransform.localScale = Vector3.one; // or keep current scale
+        if (lastPop != null) lastPop.rectTransform.localScale = Vector3.one; 
     }
 
-/// Call when resetting (e.g., EnterIdle) to remove the pinned popup.
+
 public void ClearPinnedPop()
 {
     keepLast = false;
@@ -118,7 +118,7 @@ public void PopSprinklesBottomCenter(string text, bool big = false)
 {
     if (popTextParent == null || popTextPrefab == null) return;
 
-    // If we’re not keeping the previous one, clean it up before spawning a new
+   
     if (!keepLast && lastPop != null) {
         if (lastRoutine != null) { StopCoroutine(lastRoutine); lastRoutine = null; }
         if (lastPop != null) Destroy(lastPop.gameObject);
@@ -134,7 +134,7 @@ public void PopSprinklesBottomCenter(string text, bool big = false)
 
     rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0f);
     rect.pivot     = new Vector2(0.5f, 0.5f);
-    rect.anchoredPosition = new Vector2(0f, bottomY); // or your hardcoded value
+    rect.anchoredPosition = new Vector2(0f, bottomY); 
 
     tmp.text = text;
 
@@ -142,11 +142,11 @@ public void PopSprinklesBottomCenter(string text, bool big = false)
     rect.localScale = Vector3.one * baseScale;
     cg.alpha = 0f;
 
-    // Remember this as “last”
+  
     lastPop = tmp;
     lastCg  = cg;
 
-    // Store the coroutine so we can stop it when pinning
+   
     lastRoutine = StartCoroutine(FadeAndPop(tmp, cg, baseScale));
 }
 
@@ -174,7 +174,6 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
 
     yield return new WaitForSecondsRealtime(tHold);
 
-    // If we decided to keep the last popup AND this is the last one, stop here (don’t fade out or destroy)
     if (keepLast && tmp == lastPop) {
         lastRoutine = null;
         yield break;
@@ -194,7 +193,6 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
 
 
     private void Awake() {
-        // Simple singleton (last one wins). Keep UI_Bonus enabled in all states.
         Instance = this;
         rootCanvas = GetComponentInParent<Canvas>();
         if (rootCanvas == null) {
@@ -202,11 +200,7 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         }
     }
 
-    // -------------------- PUBLIC API --------------------
 
-    /// <summary>
-    /// Pop a "Sprinkles!" text near a world position (e.g., at a candle).
-    /// </summary>
     public void PopSprinkles(string msg, Vector3 worldPos, bool big = true, Color? colorOverride = null) {
         if (popTextPrefab == null || popTextParent == null || rootCanvas == null) return;
         var screen = Camera.main ? Camera.main.WorldToScreenPoint(worldPos) : new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0f);
@@ -215,18 +209,13 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         SpawnPopText(msg, local, big, colorOverride);
     }
 
-    /// <summary>
-    /// Pop a text dead-center of the screen (handy for testing).
-    /// </summary>
+
     public void PopSprinklesCenter(string msg, bool big = true, Color? colorOverride = null) {
         if (popTextPrefab == null || popTextParent == null) return;
         SpawnPopText(msg, Vector2.zero, big, colorOverride);
     }
 
-    /// <summary>
-    /// Optional legacy: add an icon to a stacked bar (top/right/etc).
-    /// </summary>
-    public void AddBonusIcon(BonusType type, Sprite overrideSprite = null) {
+      public void AddBonusIcon(BonusType type, Sprite overrideSprite = null) {
         if (iconBar == null || iconPrefab == null) return;
         var sprite = overrideSprite ?? GetIcon(type);
         if (sprite == null) return;
@@ -237,9 +226,7 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         img.gameObject.SetActive(true);
     }
 
-    /// <summary>
-    /// Show a brief icon flash at the bottom-left anchor (same spot every time).
-    /// </summary>
+
     public void FlashBonus(BonusType type, Sprite overrideSprite = null) {
         if (flashAnchor == null || iconPrefab == null) return;
         var sprite = overrideSprite ?? GetIcon(type);
@@ -255,14 +242,12 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         var cg = img.GetComponent<CanvasGroup>();
         if (cg == null) cg = img.gameObject.AddComponent<CanvasGroup>();
 
-        // start hidden & small
+     
         cg.alpha = 0f;
         img.transform.localScale = Vector3.one * flashStartScale;
 
         StartCoroutine(FlashRoutine(img, cg));
     }
-
-    // -------------------- INTERNALS --------------------
 
     private Sprite GetIcon(BonusType t) {
         switch (t) {
@@ -285,7 +270,6 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         var cg = go.GetComponent<CanvasGroup>();
         if (cg == null) cg = go.gameObject.AddComponent<CanvasGroup>();
 
-        // Initial state
         cg.alpha = 0f;
         go.transform.localScale = Vector3.one * (big ? bigScale : smallScale);
 
@@ -308,7 +292,7 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
         }
         cg.alpha = 1f;
 
-        // hold (drift a bit)
+        // hold but drift a bit
         t = 0f;
         while (t < tHold) {
             t += Time.unscaledDeltaTime;
@@ -334,7 +318,7 @@ private IEnumerator FadeAndPop(TextMeshProUGUI tmp, CanvasGroup cg, float baseSc
 private TextMeshProUGUI lastPop;
 private CanvasGroup lastCg;
 private Coroutine lastRoutine;
-private bool keepLast; // when true, the last pop stays on screen
+private bool keepLast; 
 
     private IEnumerator FlashRoutine(Image img, CanvasGroup cg) {
         float tIn = flashFadeIn;
@@ -342,7 +326,7 @@ private bool keepLast; // when true, the last pop stays on screen
         float tOut = Mathf.Max(0.05f, flashDuration - (tIn + tHold));
 
         float t = 0f;
-        // fade in + pop scale
+       
         while (t < tIn) {
             t += Time.unscaledDeltaTime;
             float a = Mathf.Clamp01(t / tIn);
@@ -353,14 +337,13 @@ private bool keepLast; // when true, the last pop stays on screen
         cg.alpha = 1f;
         img.transform.localScale = Vector3.one * flashPopScale;
 
-        // hold
         t = 0f;
         while (t < tHold) {
             t += Time.unscaledDeltaTime;
             yield return null;
         }
 
-        // fade out and settle to 1.0 scale
+        
         t = 0f;
         while (t < tOut) {
             t += Time.unscaledDeltaTime;

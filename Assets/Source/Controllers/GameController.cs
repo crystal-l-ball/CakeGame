@@ -3,35 +3,35 @@ using UnityEngine.SceneManagement;
 
 internal class GameController : Singleton<GameController>
 {
-    // =================== READ-ONLY ===================
+    
     public int  CandlesBlownOut => candlesBlownOut;
     public bool GameOver        => gameOver;
 
-    // =================== SCREEN GROUPS ==========================
-    [Header("Screen Groups (drag scene parents here)")]
+    // Screenz
+    [Header("Screen Groups")]
     [SerializeField] private GameObject idleGroup;
     [SerializeField] private GameObject playGroup;
     [SerializeField] private GameObject winGroup;
     [SerializeField] private GameObject loseGroup;
 
-    [Header("Round Timer (balloon)")]
+    [Header("Balloon as timer")]
     [SerializeField] private BalloonTimer balloonTimer;
 
     [Header("Start Overlay")]
-    [SerializeField] private GameObject startOverlay; // drag StartOverlay here in Inspector
+    [SerializeField] private GameObject startOverlay; 
 
-    // Events others can listen to
-    public event System.Action OnBeginIgnition; // candles subscribe to this for the delayed start
-    public event System.Action OnLose;          // crowd tint subscribes to this
+
+    public event System.Action OnBeginIgnition; // need to delay candle burn for start/instruction screen
+    public event System.Action OnLose;          
     public event GameOver      OnGameOver;
 
-    // =================== AUDIO ==============================
-    [Header("Audio (drag AudioSources)")]
+    // Sound
+    [Header("Audio")]
     [SerializeField] private AudioSource idleMusic;  // loops during Idle
     [SerializeField] private AudioSource gameMusic;  // main song (NO loop)
 
-    // =================== OPTIONAL UI =========================
-    [Header("Score (optional)")]
+    // UI (not done yet -- don't want to show score? Now using sprinkle count instead??)
+    [Header("Score")]
     [SerializeField] private ScoreTextBehaviour scoreText;
     [SerializeField] private int pointsPerCandle = 10;
 
@@ -39,8 +39,8 @@ internal class GameController : Singleton<GameController>
     [Header("Lose VFX (optional)")]
     [SerializeField] private ParticleSystem loseSmoke;
 
-    // =================== COLORS =============================
-    [Header("Colors")]
+    // =================== COLOURS =============================
+    [Header("Colours")]
     [SerializeField] private Color normalColor = Color.black;
     [SerializeField] private Color loseColor   = Color.black;
 
@@ -49,12 +49,12 @@ internal class GameController : Singleton<GameController>
     [SerializeField] private GameObject musicParent;
     [SerializeField] private GameObject victoryMusicParent;
 
-    // =================== GAME TIMING ========================
+    // Timing
     [Header("Game Timing (auto set from song)")]
-    [SerializeField] private float levelDuration; // set to 1× song length on StartGame
+    [SerializeField] private float levelDuration; // set to one song length on StartGame
     private float currentTimer;
 
-    // =================== INTERNAL STATE =====================
+
     private int  candlesBlownOut;
     private int  score;
     private bool gameOver;
@@ -62,15 +62,15 @@ internal class GameController : Singleton<GameController>
     private enum State { Idle, Playing, Win, Lose }
     private State state = State.Idle;
 
-    private static PlayerControls playerControls; // your Input Actions map
+    private static PlayerControls playerControls; 
 
-    // ---------- Bonus plumbing (safe placeholders) ----------
+    // Can't remember what this bit is for?
     [Header("Bonus Plumbing (optional)")]
-    [SerializeField] private CandleBehaviour[] candleRefs; // you can assign these later (A..G)
+    [SerializeField] private CandleBehaviour[] candleRefs; // for later
     private float[] lastExtinguishTime = new float[5];
     [SerializeField] private float bestieWindow = 0.25f;
 
-    // --------------------------------------------------------
+    
 
     private void Start()
     {
@@ -91,7 +91,7 @@ internal class GameController : Singleton<GameController>
         switch (state)
         {
             case State.Idle:
-                // Start on ANY blow key (A/S/D/F/G)
+                // Game starts when player blows any candle
                 if (playerControls.Player.Blow_Candle_A.WasPerformedThisFrame()
                  || playerControls.Player.Blow_Candle_S.WasPerformedThisFrame()
                  || playerControls.Player.Blow_Candle_D.WasPerformedThisFrame()
@@ -107,7 +107,7 @@ internal class GameController : Singleton<GameController>
 
                 currentTimer += Time.deltaTime;
 
-                // Win when song finished (backup: timer exceeded)
+                // Win when song is finished - maybe refine? If candle burn is too slow, its almost impossible to lose 
                 if (currentTimer >= levelDuration || (gameMusic && !gameMusic.isPlaying))
                 {
                     WinGame();
@@ -116,12 +116,12 @@ internal class GameController : Singleton<GameController>
 
             case State.Win:
             case State.Lose:
-                // Waiting for auto-return (we reload scene after delay)
+               
                 break;
         }
     }
 
-    // ------------------- State Entrances ---------------------
+    // State starts
     private void EnterIdle()
     {
         state = State.Idle;
@@ -135,13 +135,13 @@ internal class GameController : Singleton<GameController>
 
         if (Camera.main) Camera.main.backgroundColor = normalColor;
 
-        // Visibility
+        // what's shown
         if (idleGroup) idleGroup.SetActive(true);
         if (playGroup) playGroup.SetActive(false);
         if (winGroup)  winGroup.SetActive(false);
         if (loseGroup) loseGroup.SetActive(false);
 
-        // Audio
+        // Audio and music
         if (victoryMusicParent) victoryMusicParent.SetActive(false);
         if (musicParent)        musicParent.SetActive(false);
 
@@ -152,16 +152,16 @@ internal class GameController : Singleton<GameController>
         }
         if (gameMusic) gameMusic.Stop();
 
-        // VFX reset
+        // Reset the smoke
         ResetLoseSmoke();
 
-        // Balloon back to bottom & hidden
+        // Reset the balloon timer
         balloonTimer?.ResetBalloon();
 
-        // Score reset
+        // Reset the score
         scoreText?.UpdateScore(0, 1);
 
-        // Reset crowd tint (use new API to avoid obsolete warning)
+        // Reset crowd darkening/tint
         var crowd = Object.FindFirstObjectByType<CrowdTintOnLose>();
         crowd?.ResetToOriginal();
     }
@@ -189,22 +189,22 @@ internal class GameController : Singleton<GameController>
             gameMusic.loop = false;
             gameMusic.time = 0f;
             gameMusic.Play();
-            // ONE play of the song:
+            // One playthrough of birthday song -->
             levelDuration = (gameMusic.clip != null) ? gameMusic.clip.length : 44f;
         }
         else
         {
-            levelDuration = 44f; // fallback if no clip assigned
+            levelDuration = 44f; // This will be used if the music clip isn't assigned
         }
 
-        // Start the balloon timer for the round length
+        // Start the balloon timer
         balloonTimer?.Begin(levelDuration);
 
-        // Show overlay & 5s delay before any ignition is allowed
+        // Show instructions overlay and 5s delay before candles ignite 
         if (startOverlay) startOverlay.SetActive(true);
         StartCoroutine(BeginIgnitionAfterDelay(5f));
 
-        // Score reset
+        // reset score
         scoreText?.UpdateScore(0, 1);
     }
 
@@ -212,44 +212,43 @@ internal class GameController : Singleton<GameController>
     {
         yield return new WaitForSeconds(seconds);
 
-        // hide overlay
+        // hide instructions overlay
         if (startOverlay) startOverlay.SetActive(false);
 
-        // tell all candles to ignite now
+        // All candles can now ignite
         OnBeginIgnition?.Invoke();
     }
 
-    // ------------------- Existing hooks ----------------------
+    
     public void BlowOutCandle()
     {
         candlesBlownOut++;
 
-        // Counter UI might not exist in this scene
+        // The counting UI isn't used at the moment. Sprinkles represent "score" or a candle blown out
         var counter = CandleCounterBehaviour.Instance;
         if (counter != null)
             counter.UpdateCount(candlesBlownOut);
     }
 
-    // Used by CandleBehaviour to spawn decorations + score
+    // Candle behavious references this for adding sprinkles and scoring
     public void BlowOutCandle(int candleIndex, Transform candleRoot)
     {
-        BlowOutCandle(); // preserves your old behavior
+        BlowOutCandle(); 
 
         DecorationManager.Instance?.SpawnAt(candleRoot);
 
-        // optional scoring
+        // scoring stuff - still a bit of a shambles. 1 blow should = 1 sprinkle, unless there's a bonus
         score += pointsPerCandle;
-        scoreText?.UpdateScore(score, 1); // multiplier = 1 for now
+        scoreText?.UpdateScore(score, 1); 
     }
 
-    // Called by CandleBehaviour when a candle is blown out (for bonus timing/logic)
+    // For bonus
     public void ReportExtinguish(int candleIndex, Transform candleRoot, float remaining01)
     {
         int i = Mathf.Clamp(candleIndex - 1, 0, lastExtinguishTime.Length - 1);
         lastExtinguishTime[i] = Time.time;
 
-        // (Bonus logic can be added later using lastExtinguishTime & remaining01)
-        // Example: BonusUI.Instance?.FlashBonus(BonusType.CloseSave);
+       
     }
 
     public void WinGame()
@@ -269,7 +268,7 @@ internal class GameController : Singleton<GameController>
 
         OnGameOver?.Invoke();
 
-        // Full reset after delay
+       
         Invoke(nameof(ReloadScene), 15f);
     }
 
@@ -291,16 +290,15 @@ internal class GameController : Singleton<GameController>
             loseSmoke.Play();
         }
 
-        // notify crowd to tint
+        
         OnLose?.Invoke();
 
         OnGameOver?.Invoke();
 
-        // Full reset after delay
+        
         Invoke(nameof(ReloadScene), 15f);
     }
 
-    // ------------------- Helpers -----------------------------
     private void ResetLoseSmoke()
     {
         if (!loseSmoke) return;
